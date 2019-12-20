@@ -1,0 +1,28 @@
+// $VARIABLES
+// ========================================
+
+// #layout
+@well-default-vertical-padding     : 1em;
+@well-default-horizontal-padding   : 1em;
+@well-large-vertical-padding       : 1.5em;
+@well-large-horizontal-padding     : 1.5em;
+@well-small-vertical-padding       : 0.8em;
+@well-small-horizontal-padding     : 0.8em;
+@well-border-width                 : 1px;
+
+// #colors
+@well-border-color                 : @black-10;
+
+// $STYLES
+// ========================================
+
+// Base class
+.well 
+{
+	padding: @well-default-vertical-padding @well-default-horizontal-padding;
+	border: @well-border-width solid @well-border-color;
+}
+
+// Sizes
+.well-lg { padding: @well-large-vertical-padding @well-large-horizontal-padding; }
+.well-sm { padding: @well-small-vertical-padding @well-small-horizontal-padding; }

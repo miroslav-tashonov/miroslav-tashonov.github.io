@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+<title>
+  
+    Docs
+  
+</title>
+
+<!-- Bootstrap core CSS -->
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- Optional Bootstrap Theme -->
+
+  <link href="data:text/css;charset=utf-8," data-href="css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
+
+
+
+<!-- Documentation extras -->
+
+<link href="css/docs.min.css" rel="stylesheet">
+
+  </head>
+  <body id="top">
+
+
+    <!-- Docs page layout -->
+    <div class="bs-docs-header" id="content">
+      <div class="container">
+        <h1>Flatron Documentation</h1>
+        <p>Bootstrap 3 flat theme</p>
+    </div>
+    </div>
+
+    <div class="container bs-docs-container">
+
+      <div class="row">
+
+        <div class="col-md-9" role="main">
+
+
+
+  
+<div class="bs-docs-section">
+  <h1 id="overview" class="page-header">Overview</h1>
+
+  <p>Flatron is a Bootstrap 3 flat theme that restructures bootstrap and make it more beatiful and more easy to edit & use. One important thing to notice about Flatron is that it removes the default bootstrap spacings between different block this is beacause every desgin has its proper spacing that differ from design to design so the only thing that you are asked to do when using flatron is to set your the spacing that you see that it fits in your project main stylesheet.</p>
+
+</div>
+  
+<div class="bs-docs-section">
+  <h1 id="structure" class="page-header">Structure</h1>
+
+  <p>The <code>less</code> folder in this theme consists of three main parts that are easy to figure out</p>
+
+  <h4>_general folder</h4>
+  <ul>
+    <li>
+      <p>This folder consists of the some useful general mixins used to generate diffrenet different styles like border radius, box shadow .... etc</p>
+    </li>
+    <li>
+      <p>It also contains <b>variables.less</b> file that contains the basic variable necessary for generating the theme</p>
+    </li>
+  </ul><br>
+
+  <h4>base folder</h4>
+  <ul>
+    <li>
+      <p>
+       This folder contains the general style like for elements like <code>body</code>, <code>a</code>, <code>p</code> ... etc those styles are fond in <b>scaffolding.less</b> file 
+      </p>
+    </li>
+    <li>
+      <p>
+       It contains the basic utilities and bootstrap helpers classes like <code>.clearfix</code> class. All of this found in <b>helpers.less</b> file 
+      </p>
+    </li>
+    <li>
+      <p>
+       In <b>custom-helpers.less</b> file you will find the color classes that can be used to easly set the background, text, border, svg fill, strokes colors. i.e. <code>.text-red</code> sets the text color to red
+      </p>
+    </li>
+  </ul>
+<br>
+  <h4>other folders</h4>
+  <ul>
+    <li>
+      <p>All other folders are the default modules used by bootstrap like <i>badges</i>, <i>blockquotes</i>, <i>buttons</i> ... etc</p>
+    </li>
+    <li>
+      <p>
+        In each folder you will find a <code>.less</code> file and <code>.html</code> file, the less file contains the basic styles for the element and the html file contains the structure you should use in your project
+      </p>
+    </li>
+  </ul>
+  
+
+
+</div>
+  
+<div class="bs-docs-section">
+  <h1 id="notes" class="page-header">Notes</h1>
+
+  <ul>
+    <li>
+      The basic structure of default bootstrap project is changed to <b>element base structure</b> meaning you can find, edit or remove elements in seconds.
+    </li>
+    <li>
+      As mentioned in the overview section the default bootstrap spacing beween elements are removed and you set it based on what fits your design without overriding anything
+    </li>
+    <li>
+      This theme uses <code>grunt</code> for compiling less files you can read about it <a href="http://gruntjs.com/" target="_blank">here</a>
+    </li>
+  </ul>
+
+</div>
+  
+<div class="bs-docs-section">
+  <h1 id="compiling" class="page-header">Compiling</h1>
+
+  <p>
+    As mentioned above this theme uses <code>grunt</code> to compile its less files. What happens when you run the <code>grunt</code> command is that it compiles all the less files into two versions of CSS files one minified for production purpose and the unminified version for the development purpose
+
+
+
+  </p><br>
+
+  <p>
+    If you want to use another compliling method that is totally fine all what you have to compile to get you bootstrap css file is to compile the <code>bootstrap.less</code> file in the <b>less folder</b> and your are good to go
+  </p>
+
+</div>
+  
+<div class="bs-docs-section">
+  <h1 id="contact" class="page-header">Contact</h1>
+
+  <p>
+    Enough talking, Stuck and want help? I will do my best to help, just click the contact link on your right and send me a message. Cheers :)
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+        </div>
+
+<div class="col-md-3">
+          <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top" role="complementary">
+            <ul class="nav bs-docs-sidenav">
+              
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#structure">Structure</a></li>
+                <li><a href="#notes">Notes</a></li>
+                <li><a href="#compiling">Compiling Less</a></li>
+                <li><a target="_blank" href="http://codecanyon.net/user/krazicode">Contact</a></li>
+            </ul>
+            
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+
+    <!-- Footer
+================================================== -->
+<footer class="bs-docs-footer" role="contentinfo">
+  Theme made by <a target="_blank" href="http://codecanyon.net/user/krazicode">Krazicode</a>.</p>
+  This docs page uses <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> documentation licensed under <a target="_blank" href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.min.js"></script>
+
+
+  <script src="js/bootstrap.min.js"></script>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,41 @@
+// $VARIABLES
+// ========================================
+
+// #layout
+@thumbnail-border-radius            : 2px;
+@thumbnail-caption-padding          : 2em;
+@thumbnail-caption-border-width     : 1px;
+
+// #colors
+@thumbnail-caption-border           : @black-10;
+@thumbnail-caption-color            : @black-40;
+
+// $STYLES
+// ========================================
+
+// Mixin and adjust the regular image class
+.thumbnail 
+{
+	display: block;
+	border-radius: @thumbnail-border-radius;
+	.transition(border .2s ease-in-out);
+
+	> img,
+	a > img 
+	{
+		&:extend(.img-responsive);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	// Image captions
+	.caption 
+	{
+		padding: @thumbnail-caption-padding;
+		color: @thumbnail-caption-color;
+		border: @thumbnail-caption-border-width solid @thumbnail-caption-border;
+		border-top: 0;
+
+		> p { margin-top: 1em }
+	}
+}

@@ -1,0 +1,716 @@
+<input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+
+<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+
+<form class="form-inline" role="form">
+	<div class="form-group">
+		<label class="sr-only">Email</label>
+		<p class="form-control-static">email@example.com</p>
+	</div>
+	<div class="form-group">
+		<label for="inputPassword2" class="sr-only">Password</label>
+		<input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+	</div>
+	<button type="submit" class="btn btn-default">Confirm identity</button>
+</form>
+
+<form class="form-horizontal" role="form">
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Email</label>
+		<div class="col-sm-10">
+			<p class="form-control-static">email@example.com</p>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="inputPassword" class="col-sm-2 control-label">Password</label>
+		<div class="col-sm-10">
+			<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+		</div>
+	</div>
+</form>
+
+<form class="form-horizontal" role="form">
+	<div class="form-group">
+		<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+		<div class="col-sm-10">
+			<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+		<div class="col-sm-10">
+			<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<div class="checkbox">
+<div class="checkbox">
+	<label class="custom-element">
+		<input type="checkbox" id="checkbox-1-1" value="">
+		<span class="fancy-checkbox"></span>
+	</label>
+	<label for="checkbox-1-1">Remember Me</label>
+</div>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button type="submit" class="btn btn-default">Sign in</button>
+		</div>
+	</div>
+</form>
+
+<div class="checkbox">
+	<label class="custom-element">
+		<input type="checkbox" id="checkbox-1-1" value="">
+		<span class="fancy-checkbox"></span>
+	</label>
+	<label for="checkbox-1-1">checkbox 1</label>
+</div>
+<div class="checkbox disabled">
+	<label class="custom-element">
+		<input type="checkbox" id="checkbox-1-2" disabled value="">
+		<span class="fancy-checkbox"></span>
+	</label>
+	<label for="checkbox-1-2">checkbox 2</label>
+</div>
+
+<div class="radio">
+	<label class="custom-element">
+		<input type="radio" id="radio-1-1" value="">
+		<span class="fancy-radio"></span>
+	</label>
+	<label for="radio-1-1">radio 1</label>
+</div>
+<div class="radio">
+	<label class="custom-element">
+		<input type="radio" id="radio-1-2" value="">
+		<span class="fancy-radio"></span>
+	</label>
+	<label for="radio-1-2">radio 2</label>
+</div>
+<div class="radio disabled">
+	<label class="custom-element">
+		<input type="radio" id="radio-1-2" disabled value="">
+		<span class="fancy-radio"></span>
+	</label>
+	<label for="radio-1-2">radio 2</label>
+</div>
+
+<form class="form-inline" role="form">
+	<div class="form-group">
+			<div class="input-group">
+				<label class="sr-only" for="exampleInputEmail2">Email address</label>
+				<div class="input-group-addon"><span class="fa fa-user"></span></div>
+				<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+			</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<div class="input-group-addon">@</div>
+			<input class="form-control" type="email" placeholder="Enter email">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="sr-only" for="exampleInputPassword2">Password</label>
+		<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+	</div>
+	<div class="checkbox">
+		<label>
+			<input type="checkbox"> Remember me
+		</label>
+	</div>
+	<button type="submit" class="btn btn-default">Sign in</button>
+</form>
+
+<form class="form-horizontal" role="form">
+
+	<!-- Input fields -->
+	<fieldset>
+		<legend>Input fields</legend>
+		
+		<!-- Text input and help text -->
+		<div class="form-group">
+			<label for="inputText" class="col-sm-3 control-label">Text input</label>
+			<div class="col-sm-9 col-md-6">
+				<input placeholder="Placeholder Text" type="text" class="form-control" id="inputText" />
+				<p class="help-block">Optional help text.</p>
+			</div>
+		</div>
+
+		<div class="form-group">
+								<label for="inputWithLeftButton" class="col-sm-3 control-label">Input with right button</label>
+								<div class="col-sm-9 col-md-6">
+									<div class="input-group">
+										<div class="input-group-addon"><span class="fa fa-user"></span></div>
+										<input type="text" class="form-control" id="inputWithLeftButton" placeholder="Password">
+										<span class="input-group-btn">
+											<input type="submit" class="btn btn-primary" value="Button">
+										</span>
+									</div>
+								</div>
+							</div>
+
+		<div class="form-group">
+								<label for="inputWithLeftButton" class="col-sm-3 control-label">Input with left button</label>
+								<div class="col-sm-9 col-md-6">
+									<div class="input-group">
+									<div class="input-group-btn">
+
+											<a href="#" class="btn btn-green dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+													Dropdown <span class="caret"></span>
+											</a>
+
+											<ul class="dropdown-menu" role="menu">
+													<li><a href="#">Action</a></li>
+													<li><a href="#">Another action</a></li>
+													<li><a href="#">Something else here</a></li>
+													<li class="divider"></li>
+													<li class="dropdown-header">Nav header</li>
+													<li><a href="#">Separated link</a></li>
+													<li><a href="#">One more separated link</a></li>
+													<li class="disabled"><a href="#">One more separated link</a></li>
+											</ul>
+									</div>
+										<input type="text" class="form-control" id="inputWithLeftButton" placeholder="Password">
+									<div class="input-group-addon"><span class="fa fa-lock"></span></div>
+									</div>
+								</div>
+							</div>
+		
+		<!-- Text input with addon -->
+		<div class="form-group">
+			<label for="inputText" class="col-sm-3 control-label">Text input with addon</label>
+			<div class="col-sm-9 col-md-6">
+				<div class="input-group">
+					<label class="sr-only" for="exampleInputEmail2">Email address</label>
+					<div class="input-group-addon">@</div>
+					<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+				</div>
+			</div>
+		</div>
+		
+		<!-- Password input with required star -->
+		<div class="form-group">
+			<label for="inputPassword" class="col-sm-3 control-label">Password input <span class="required-field">*</span></label>
+			<div class="col-sm-9 col-md-6">
+				<input placeholder="Placeholder Text" type="password" class="form-control" id="inputPassword" />
+			</div>
+		</div>
+		
+		<!-- Input with right icon -->
+		<div class="form-group">
+			<label for="inputWithRightIcon" class="col-sm-3 control-label">Input with right icon</label>
+			<div class="col-sm-9 col-md-6">
+				<div class="has-feedback">
+					<input placeholder="Placeholder Text" type="text" class="form-control" id="inputWithRightIcon" />
+					<span class="fa fa-envelope form-control-feedback" aria-hidden="true"></span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Input with left icon -->
+		<div class="form-group">
+			<label for="inputWithLeftIcon" class="col-sm-3 control-label">Input with left icon</label>
+			<div class="col-sm-9 col-md-6">
+				<div class="has-feedback has-left-icon">
+					<div class="input-group"> 
+						<span class="fa fa-envelope left-icon" aria-hidden="true"></span>
+						<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+					</div>
+					<span class="fa fa-envelope form-control-feedback" aria-hidden="true"></span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Success input (green) -->
+		<div class="form-group">
+			<label for="inputSuccess" class="col-sm-3 control-label">Success input</label>
+			<div class="col-sm-9 col-md-6">
+				<div class="has-feedback has-success">
+					<input placeholder="Placeholder Text" type="text" class="form-control" id="inputSuccess" />
+					<span class="fa fa-check form-control-feedback" aria-hidden="true"></span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Warning input (yellow) -->
+		<div class="form-group">
+			<label for="inputWarning" class="col-sm-3 control-label">Warning input</label>
+			<div class="col-sm-9 col-md-6">
+				<div class="has-feedback has-warning">
+					<input placeholder="Placeholder Text" type="text" class="form-control" id="inputWarning" />
+					<span class="fa fa-warning form-control-feedback" aria-hidden="true"></span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Error input (red) -->
+		<div class="form-group">
+			<label for="inputError" class="col-sm-3 control-label">Error input</label>
+			<div class="col-sm-9 col-md-6">
+				<div class="has-feedback has-error">
+					<input placeholder="Placeholder Text" type="text" class="form-control" id="inputError" />
+					<span class="fa fa-close form-control-feedback" aria-hidden="true"></span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Input- and label with help icon -->
+		<div class="form-group">
+			<label for="inputWithHelp-2" class="col-sm-3 control-label">Input with help icon <i class="fa fa-question-circle help-icon" data-toggle="tooltip" data-placement="bottom" title="Help icon after label"></i></label>
+			<div class="col-sm-9 col-md-6">
+				<div class="has-feedback">
+					<input placeholder="Placeholder Text" type="text" class="form-control" id="inputWithHelp-2" />
+					<span class="fa fa-question-circle form-control-feedback help-icon" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="Help icon in the text field"></span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Select -->
+		<div class="form-group">
+			<label for="inputSelect" class="col-sm-3 control-label">Select</label>
+			<div class="col-sm-9 col-md-6">
+				<select class="form-control" id="inputSelect">
+					<option value="0">- Select a value -</option>
+					<option value="1">Value 1</option>
+					<option value="2">Value 2</option>
+					<option value="3">Value 3</option>
+				</select>
+			</div>
+		</div>
+		
+		<!-- Multiple select -->
+		<div class="form-group">
+			<label for="inputMultipleSelect" class="col-sm-3 control-label">Multiple select</label>
+			<div class="col-sm-9 col-md-6">
+				<select class="form-control multiple" multiple="multiple" size="5" id="inputMultipleSelect">
+					<option value="0">- Select a value -</option>
+					<option value="1">Value 1</option>
+					<option value="2">Value 2</option>
+					<option value="3">Value 3</option>
+					<option value="4">Value 4</option>
+					<option value="5">Value 5</option>
+					<option value="6">Value 6</option>
+					<option value="7">Value 7</option>
+					<option value="8">Value 8</option>
+				</select>
+			</div>
+		</div>
+		
+		<!-- Text area -->
+		<div class="form-group">
+			<label for="inputTextarea" class="col-sm-3 control-label">Textarea</label>
+			<div class="col-sm-9 col-md-6">
+				<textarea placeholder="Message" class="form-control" id="inputTextarea" cols="20" rows="3"></textarea>
+			</div>
+		</div>
+		
+		<!-- Small input and -label -->
+		<div class="form-group form-group-sm">
+			<label for="inputSmall" class="col-sm-3 control-label control-label-sm">Small input with small label</label>
+			<div class="col-sm-9 col-md-6">
+				<input placeholder="Placeholder Text" type="text" class="form-control input-sm" id="inputSmall" />
+			</div>
+		</div>
+		
+		<!-- Medium input and -label -->
+		<div class="form-group">
+			<label for="inputMedium" class="col-sm-3 control-label">Medium input with medium label</label>
+			<div class="col-sm-9 col-md-6">
+				<input placeholder="Placeholder Text" type="text" class="form-control" id="inputMedium" />
+			</div>
+		</div>
+		
+		<!-- Big input and -label -->
+		<div class="form-group form-group-lg">
+			<label for="inputBig" class="col-sm-3 control-label control-label-lg">Big input with big label</label>
+			<div class="col-sm-9 col-md-6">
+				<input placeholder="Placeholder Text" type="text" class="form-control input-lg" id="inputBig" />
+			</div>
+		</div>
+	</fieldset>
+	
+	<!-- Checkbox and radio -->
+	<fieldset>
+		<legend>Checkbox and radio</legend>
+		
+		<!-- Checkbox list -->
+		<div class="form-group">
+			<div class="col-sm-4 col-md-3">
+				<div class="checkbox">
+					<label class="custom-option button">
+						<input placeholder="Placeholder Text" type="checkbox" id="checkbox-lang-1" name="checkbox-language" value="en" checked="checked" />
+						<span class="button-checkbox"></span>
+					</label>
+					<label for="checkbox-lang-1">English</label>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-3">
+				<div class="checkbox">
+					<label class="custom-option button">
+						<input placeholder="Placeholder Text" type="checkbox" id="checkbox-lang-2" name="checkbox-language" value="de" />
+						<span class="button-checkbox"></span>
+					</label>
+					<label for="checkbox-lang-2">German</label>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-3">
+				<div class="checkbox">
+					<label class="custom-option button">
+						<input placeholder="Placeholder Text" type="checkbox" id="checkbox-lang-3" name="checkbox-language" value="fr" />
+						<span class="button-checkbox"></span>
+					</label>
+					<label for="checkbox-lang-3">French</label>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Radio list -->
+		<div class="form-group">
+			<div class="col-sm-4 col-md-3">
+				<div class="radio">
+					<label class="custom-option button">
+						<input placeholder="Placeholder Text" type="radio" id="radio-lang-1" name="radio-language" value="en" checked="checked" />
+						<span class="button-radio"></span>
+					</label>
+					<label for="radio-lang-1">English</label>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-3">
+				<div class="radio">
+					<label class="custom-option button">
+						<input placeholder="Placeholder Text" type="radio" id="radio-lang-2" name="radio-language" value="de" />
+						<span class="button-radio"></span>
+					</label>
+					<label for="radio-lang-2">German</label>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-3">
+				<div class="radio">
+					<label class="custom-option button">
+						<input placeholder="Placeholder Text" type="radio" id="radio-lang-3" name="radio-language" value="fr" />
+						<span class="button-radio"></span>
+					</label>
+					<label for="radio-lang-3">French</label>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+	
+	<!-- Checkbox toggle and radio toggle -->
+	<fieldset>
+		<legend>Checkbox toggle and radio toggle</legend>
+		
+		<!-- Checkbox toggle -->
+		<div class="form-group">
+			<div class="col-sm-4 col-md-3">
+				<div class="checkbox">
+					<label class="custom-option toggle" data-off="OFF" data-on="ON">
+						<input placeholder="Placeholder Text" type="checkbox" id="checkbox-toggle-lang-1" name="checkbox-toggle-language" value="en" checked="checked" />
+						<span class="button-checkbox"></span>
+					</label>
+					<label for="checkbox-toggle-lang-1">English</label>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-3">
+				<div class="checkbox">
+					<label class="custom-option toggle" data-off="OFF" data-on="ON">
+						<input placeholder="Placeholder Text" type="checkbox" id="checkbox-toggle-lang-2" name="checkbox-toggle-language" value="de" />
+						<span class="button-checkbox"></span>
+					</label>
+					<label for="checkbox-toggle-lang-2">German</label>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-3">
+				<div class="checkbox">
+					<label class="custom-option toggle" data-off="OFF" data-on="ON">
+						<input placeholder="Placeholder Text" type="checkbox" id="checkbox-toggle-lang-3" name="checkbox-toggle-language" value="fr" />
+						<span class="button-checkbox"></span>
+					</label>
+					<label for="checkbox-toggle-lang-3">French</label>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Radio toggle -->
+		<div class="form-group">
+			<div class="col-sm-4 col-md-3">
+				<div class="radio">
+					<label class="custom-option toggle" data-off="OFF" data-on="ON">
+						<input placeholder="Placeholder Text" type="radio" id="radio-toggle-lang-1" name="radio-toggle-language" value="en" checked="checked" />
+						<span class="button-radio"></span>
+					</label>
+					<label for="radio-toggle-lang-1">English</label>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-3">
+				<div class="radio">
+					<label class="custom-option toggle" data-off="OFF" data-on="ON">
+						<input placeholder="Placeholder Text" type="radio" id="radio-toggle-lang-2" name="radio-toggle-language" value="de" />
+						<span class="button-radio"></span>
+					</label>
+					<label for="radio-toggle-lang-2">German</label>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-3">
+				<div class="radio">
+					<label class="custom-option toggle" data-off="OFF" data-on="ON">
+						<input placeholder="Placeholder Text" type="radio" id="radio-toggle-lang-3" name="radio-toggle-language" value="fr" />
+						<span class="button-radio"></span>
+					</label>
+					<label for="radio-toggle-lang-3">French</label>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+	
+	<!-- Star ratings -->
+	<fieldset>
+		<legend>Star ratings</legend>
+		
+		<!-- Small star rating -->
+		<div class="form-group">
+			<div class="rating rating-sm star">
+				<span class="col-sm-4 col-md-3 control-label control-label-sm">Small star rating</span>
+				
+				<div class="col-sm-6">
+					<div class="rating-wrapper">
+						<input placeholder="Placeholder Text" type="radio" name="star-rating-1" id="star-rating-5-1" value="5" />
+						<label class="fa fa-star" for="star-rating-5-1"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="star-rating-1" id="star-rating-4-1" value="4" />
+						<label class="fa fa-star" for="star-rating-4-1"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="star-rating-1" id="star-rating-3-1" value="3" checked="checked" />
+						<label class="fa fa-star" for="star-rating-3-1"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="star-rating-1" id="star-rating-2-1" value="2" />
+						<label class="fa fa-star" for="star-rating-2-1"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="star-rating-1" id="star-rating-1-1" value="1" />
+						<label class="fa fa-star" for="star-rating-1-1"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Medium star rating -->
+		<div class="form-group">
+			<div class="rating star">
+				<span class="col-sm-4 col-md-3 control-label">Medium star rating</span>
+				
+				<div class="col-sm-6">
+					<div class="rating-wrapper">
+						<input placeholder="Placeholder Text" type="radio" name="star-rating-2" id="star-rating-5-2" value="5" />
+						<label class="fa fa-star" for="star-rating-5-2"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="star-rating-2" id="star-rating-4-2" value="4" />
+						<label class="fa fa-star" for="star-rating-4-2"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="star-rating-2" id="star-rating-3-2" value="3" />
+						<label class="fa fa-star" for="star-rating-3-2"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="star-rating-2" id="star-rating-2-2" value="2" />
+						<label class="fa fa-star" for="star-rating-2-2"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="star-rating-2" id="star-rating-1-2" value="1" checked="checked" />
+						<label class="fa fa-star" for="star-rating-1-2"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Big star rating -->
+		<div class="form-group">
+			<div class="rating rating-lg star">
+				<span class="col-sm-4 col-md-3 control-label control-label-lg">Big star rating</span>
+				
+				<div class="col-sm-6">
+					<div class="rating-wrapper">
+						<input placeholder="Placeholder Text" type="radio" name="star-rating-3" id="star-rating-5-3" value="5" checked="checked" />
+						<label class="fa fa-star" for="star-rating-5-3"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="star-rating-3" id="star-rating-4-3" value="4" />
+						<label class="fa fa-star" for="star-rating-4-3"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="star-rating-3" id="star-rating-3-3" value="3" />
+						<label class="fa fa-star" for="star-rating-3-3"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="star-rating-3" id="star-rating-2-3" value="2" />
+						<label class="fa fa-star" for="star-rating-2-3"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="star-rating-3" id="star-rating-1-3" value="1" />
+						<label class="fa fa-star" for="star-rating-1-3"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+	
+	<!-- Heart ratings -->
+	<fieldset>
+		<legend>Heart ratings</legend>
+		
+		<!-- Small heart rating -->
+		<div class="form-group">
+			<div class="rating rating-sm heart">
+				<span class="col-sm-4 col-md-3 control-label control-label-sm">Small heart rating</span>
+				
+				<div class="col-sm-6">
+					<div class="rating-wrapper">
+						<input placeholder="Placeholder Text" type="radio" name="heart-rating-1" id="heart-rating-5-1" value="5" />
+						<label class="fa fa-heart" for="heart-rating-5-1"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="heart-rating-1" id="heart-rating-4-1" value="4" checked="checked" />
+						<label class="fa fa-heart" for="heart-rating-4-1"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="heart-rating-1" id="heart-rating-3-1" value="3" />
+						<label class="fa fa-heart" for="heart-rating-3-1"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="heart-rating-1" id="heart-rating-2-1" value="2" />
+						<label class="fa fa-heart" for="heart-rating-2-1"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="heart-rating-1" id="heart-rating-1-1" value="1" />
+						<label class="fa fa-heart" for="heart-rating-1-1"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Medium heart rating -->
+		<div class="form-group">
+			<div class="rating heart">
+				<span class="col-sm-4 col-md-3 control-label">Medium heart rating</span>
+				
+				<div class="col-sm-6">
+					<div class="rating-wrapper">
+						<input placeholder="Placeholder Text" type="radio" name="heart-rating-2" id="heart-rating-5-2" value="5" />
+						<label class="fa fa-heart" for="heart-rating-5-2"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="heart-rating-2" id="heart-rating-4-2" value="4" />
+						<label class="fa fa-heart" for="heart-rating-4-2"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="heart-rating-2" id="heart-rating-3-2" value="3" />
+						<label class="fa fa-heart" for="heart-rating-3-2"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="heart-rating-2" id="heart-rating-2-2" value="2" />
+						<label class="fa fa-heart" for="heart-rating-2-2"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="heart-rating-2" id="heart-rating-1-2" value="1" />
+						<label class="fa fa-heart" for="heart-rating-1-2"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Big heart rating -->
+		<div class="form-group">
+			<div class="rating rating-lg heart">
+				<span class="col-sm-4 col-md-3 control-label control-label-lg">Big heart rating</span>
+				
+				<div class="col-sm-6">
+					<div class="rating-wrapper">
+						<input placeholder="Placeholder Text" type="radio" name="heart-rating-3" id="heart-rating-5-3" value="5" />
+						<label class="fa fa-heart" for="heart-rating-5-3"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="heart-rating-3" id="heart-rating-4-3" value="4" />
+						<label class="fa fa-heart" for="heart-rating-4-3"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="heart-rating-3" id="heart-rating-3-3" value="3" />
+						<label class="fa fa-heart" for="heart-rating-3-3"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="heart-rating-3" id="heart-rating-2-3" value="2" checked="checked" />
+						<label class="fa fa-heart" for="heart-rating-2-3"></label>
+						
+						<input placeholder="Placeholder Text" type="radio" name="heart-rating-3" id="heart-rating-1-3" value="1" />
+						<label class="fa fa-heart" for="heart-rating-1-3"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+	
+	<!-- Buttons -->
+	<fieldset>
+		<legend>Buttons</legend>
+		
+		<div class="form-group">
+			<div class="col-sm-12">
+				<!-- Grey -->
+				<button type="button" class="btn btn-default">Default</button>
+				
+				<!-- Blue -->
+				<button type="button" class="btn btn-primary">Primary</button>
+				
+				<!-- Success -->
+				<button type="button" class="btn btn-success">Success</button>
+				
+				<!-- Purple -->
+				<button type="button" class="btn btn-info">Info</button>
+				
+				<!-- Yellow -->
+				<button type="button" class="btn btn-warning">Warning</button>
+				
+				<!-- Red -->
+				<button type="button" class="btn btn-danger">Danger</button>
+				
+				<!-- Link button -->
+				<button type="button" class="btn btn-link">Link button</button>
+			</div>
+		</div>
+	</fieldset>
+	
+	<!-- Alerts -->
+	<fieldset>
+		<legend>Alerts</legend>
+		
+		<!-- Default, grey -->
+		<div class="alert alert-default alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert">
+				<span aria-hidden="true">&times;</span>
+				<span class="sr-only">Close</span>
+			</button>
+			<strong>Default</strong> alert with <a class="alert-link" href="#">link</a>.
+		</div>
+		
+		<!-- Success, green -->
+		<div class="alert alert-success alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert">
+				<span aria-hidden="true">&times;</span>
+				<span class="sr-only">Close</span>
+			</button>
+			<strong>Success</strong> alert with <a class="alert-link" href="#">link</a>.
+		</div>
+		
+		<!-- Info, purple -->
+		<div class="alert alert-info alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert">
+				<span aria-hidden="true">&times;</span>
+				<span class="sr-only">Close</span>
+			</button>
+			<strong>Info</strong> alert with <a class="alert-link" href="#">link</a>.
+		</div>
+		
+		<!-- Warning, yellow -->
+		<div class="alert alert-warning alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert">
+				<span aria-hidden="true">&times;</span>
+				<span class="sr-only">Close</span>
+			</button>
+			<strong>Warning</strong> alert with <a class="alert-link" href="#">link</a>.
+		</div>
+		
+		<!-- Danger, red -->
+		<div class="alert alert-danger alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert">
+				<span aria-hidden="true">&times;</span>
+				<span class="sr-only">Close</span>
+			</button>
+			<strong>Danger</strong> alert with <a class="alert-link" href="#">link</a>.
+		</div>
+	</fieldset>
+</form>
+

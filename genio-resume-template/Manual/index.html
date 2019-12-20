@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<!-- ============================ -->
+		<!-- $META                        -->
+		<!-- ============================ -->
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="krazicode">
+
+		<!-- ============================ -->
+		<!-- $TITLE                       -->
+		<!-- ============================ -->
+
+		<title>User Manual</title>
+
+		<!-- ============================ -->
+		<!-- $STYLESHEETS                 -->
+		<!-- ============================ -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/docs.min.css" rel="stylesheet">
+
+		<!-- ============================ -->
+		<!-- $CUSTOME STYLES              -->
+		<!-- ============================ -->
+
+		<style>
+	
+			ol, ul 
+			{
+				list-style-position: inside;
+				padding: 0;
+			}
+
+			.nav .nav .nav li > a { padding-left: 40px; }
+			.nav .nav .nav li > a:hover { padding-left: 39px; }
+			.nav .nav .nav li.active > a, .nav .nav .nav li.active > a:hover { padding-left: 38px; }
+		
+		</style>
+
+  </head>
+  <body id="top" data-spy="scroll" data-target="#sidenav">
+
+		<!-- ============================ -->
+		<!-- $HEADER                      -->
+		<!-- ============================ -->
+
+		<div class="bs-docs-header" id="content">
+			<div class="container">
+				<h1>Genio <sup style="font-size: 15px; top: -30px;">v1.3</sup> Documentation</h1>
+				<p>OnePage Resume & Personal Portfolio Template</p>
+			</div>
+		</div>
+
+		<div class="container bs-docs-container">
+			<div class="row">
+				<div class="col-md-9" role="main">
+
+					<!-- ============================ -->
+					<!-- $THANKS MESSAGE              -->
+					<!-- ============================ -->
+
+					<div class="bs-docs-section">
+						<p class="alert alert-success">
+							Thank you for purchasing my item. If you have any questions that are beyond the scope of this help file, please feel free to email us via <a target="_blank" href="http://themeforest.net/user/krazicode">our profile page contact form</a>. Thanks so much!
+						</p>
+					</div>
+
+					<!-- ============================ -->
+					<!-- $OVERVIEW                    -->
+					<!-- ============================ -->
+
+					<div class="bs-docs-section">
+						<h1 id="s0" class="page-header">Overview</h1>
+						<p>
+							<b>Genio</b> is a single page resume & personal portfolio template built with <strong><a target="_blank" href="http://codecanyon.net/item/flatron-bootstrap-3-flat-theme/9786048?ref=krazicode">Flatron Bootstrap 3 Premium Theme</a></strong>. It is suitable for designers, developers & freelancers. Genio has a super clean, minimal & professional looking that anyone seeking for simplicity needs. It is packed with <strong>working Ajax/PHP hire & contact forms</strong> and a lot of other features which means it is ready for direct use.
+						</p>
+					</div>
+
+					<!-- ============================ -->
+					<!-- $FILES & FOLDER              -->
+					<!-- ============================ -->
+
+					<div class="bs-docs-section">
+						<h1 id="s1" class="page-header">Files & Folders</h1>
+						<br>
+						<img src="assets/images/folders.png" alt="">
+						<br>
+						<br>
+						<ol>
+							<li>
+								<b>Flatron Folder</b> : Contains <a target="_blank" href="http://codecanyon.net/item/flatron-bootstrap-3-flat-theme/9786048">Flatron Bootstrap 3 Premium Theme</a></strong> main files and its manual.
+							</li>
+							<li>
+								<b>Manual Folder</b> : Contains this documentation files.
+							</li>
+							<li>
+								<b>PSD Folder</b> : Contains home page PSD file.
+							</li><br>
+							<li>
+								<b>CSS Folder</b> : Contains all the stylesheets needed for coloring, typography and responsive layout.
+							</li>
+							<li>
+								<b>Fonts Folder</b> : All your fonts should go here. By default it contains the fontawesome font icon.
+							</li>
+							<li>
+								<b>Inc Folder</b> : This folder contains all PHP files. Files necessary for contact forms to work correctly.
+							</li>
+							<li>
+								<b>JS Folder</b> : Contains all JavaScript files, plugins and libraries necessary for the item functionality.
+							</li>
+							<li>
+								<b>Media Folder</b> : Contains Images Folder which contains all images used in the template.
+							</li>
+						</ol>
+					</div>
+
+					<!-- ============================ -->
+					<!-- $HTML PART                   -->
+					<!-- ============================ -->
+
+					<div class="bs-docs-section">
+					
+						<h1 id="s2" class="page-header">HTML Part</h1>
+
+						<!-- #HTML OVERVIEW -->
+						<!-- ================== -->
+
+						<h3 id="s2-1">Overview</h3>
+						<p>
+							All HTML files of this template are well organized and at the top of each file before the start of the <code>&lt;body&gt;</code> tag you will find a table of contents which maps the whole HTML file from the first line to the last line so you can find/replace/edit/add/remove easily.
+						</p>
+
+						<!-- #HTML GENERAL -->
+						<!-- ================== -->
+
+						<h3 id="s2-2">Generals</h3>
+						<p>
+							The layout of the page is so simple it about 16 section following each other as following
+<pre><code>&lt;section id="preloader"&gt;&lt;/section&gt;
+&lt;section id="home"&gt;&lt;/section&gt;
+&lt;section id="navigation"&gt;&lt;/section&gt;
+&lt;section id="profile"&gt;&lt;/section&gt;
+&lt;section id="hobbies"&gt;&lt;/section&gt;
+&lt;section id="resume"&gt;&lt;/section&gt;
+&lt;section id="milestones"&gt;&lt;/section&gt;
+&lt;section id="skills"&gt;&lt;/section&gt;
+&lt;section id="services"&gt;&lt;/section&gt;
+&lt;section id="process"&gt;&lt;/section&gt;
+&lt;section id="portfolio"&gt;&lt;/section&gt;
+&lt;section id="pricing"&gt;&lt;/section&gt;
+&lt;section id="clients"&gt;&lt;/section&gt;
+&lt;section id="testimonials"&gt;&lt;/section&gt;
+&lt;section id="contact"&gt;&lt;/section&gt;
+&lt;footer&gt;&lt;/footer&gt;</code></pre>
+						</p>
+
+						<!-- #HTML DETAILS -->
+						<!-- ================== -->
+
+						<h3 id="s2-3">Details</h3><br>
+						<p>
+							<b>Preloader section</b> : 
+							<br><br>The overlay full screen container with the loading bullets which fades out on page load and here its markup
+<pre><code>&lt;section id="preloader"&gt;&lt;/section&gt;</code></pre><br><br>
+
+							<b>Home section</b> : 
+							<br><br>This section contains the owner name, specialization, socials and personal photo and here its markup <br><br>
+              <em>Bottom Image Home</em>
+<pre><code>&lt;section id="home" class="text-center"&gt;
+  &lt;div class="container"&gt;
+  
+    &lt;!-- #INTRO BLOCK --&gt;
+    &lt;div class="..."&gt;
+
+      &lt;!-- #HOME NAME --&gt;
+      &lt;h1 class="..."&gt;...&lt;/h1&gt;
+      
+      &lt;!-- #HOME SPECIALIZATIONS LIST --&gt;
+      &lt;ul class="..."&gt;
+        &lt;li&gt;...&lt;/li&gt;
+      &lt;/ul&gt;
+
+      &lt;!-- #HOME SOCIAL LIST --&gt;
+      &lt;ul class="..."&gt;
+        &lt;li&gt;
+          &lt;a href="#" class="..."&gt;
+            &lt;i class="fa fa-*"&gt;&lt;/i&gt;
+          &lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+
+    &lt;/div&gt;
+    
+    &lt;!-- #HOME PHOTO BLOCK --&gt;
+    &lt;div class="..."&gt;
+      &lt;img src="..." alt="#" class="img-responsive"&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre><br><br>
+
+<em>Parallax Home</em>
+<pre><code>&lt;section id="home" class="text-center bg-image no-overflow" style="background-image: url(media/images/backgrounds/06.jpg);" data-stellar-background-ratio="0.5"&gt;
+
+  &lt;!-- #OVERLAY --&gt;
+  &lt;div class="overlay pattern-overlay"&gt;&lt;/div&gt;
+
+  &lt;div class="container text-center"&gt;
+
+    &lt;!-- FULLSCREEN HOLDER --&gt;
+    &lt;div id="parallax-home" class="fullscreen inline-block"&gt;
+      
+      &lt;!-- TABLE LAYOUT --&gt;
+      &lt;div class="table" style="height: 100%"&gt;
+        
+        &lt;!-- TABLE CELL --&gt;
+        &lt;div class="table-cell v-middle wow fadeIn"&gt;
+
+          &lt;!-- #HOME NAME --&gt;
+          &lt;h1 class="huge text-uppercase title-box"&gt;...&lt;/h1&gt;
+
+          &lt;!-- #HOME PROFESSION NAME --&gt;
+          &lt;div class="table xs-padder profession-box"&gt;
+            &lt;div class="table-cell"&gt;
+              &lt;h5 class="text-capitalize semi-bold lh"&gt;...&lt;/h5&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre><br><br>
+
+<em>Right Image home</em>
+<pre><code>&lt;section id="home" class="text-center bg-image no-overflow" style="background-image: url(media/images/backgrounds/02.jpg);" data-stellar-background-ratio="0.5"&gt;
+  &lt;div class="container text-center"&gt;
+
+    &lt;!-- HOLDER --&gt;
+    &lt;div id="splitted-home" class="inline-block text-left"&gt;
+      
+      &lt;!-- TABLE LAYOUT --&gt;
+      &lt;div class="table main-block__padder" style="height: 100%"&gt;
+        
+        &lt;!-- LEFT CONTENT --&gt;
+        &lt;div class="table-cell v-middle text-holder"&gt;
+          
+          &lt;h4 class="bold wow fadeInUp" data-wow-delay="0.35s"&gt;Welcome,&lt;/h4&gt;
+
+          &lt;!-- #HOME NAME --&gt;
+          &lt;h2 class="bold text-uppercase wow fadeInUp" data-wow-delay="0.35s"&gt;i'm john adam&lt;/h2&gt;
+
+          &lt;!-- #HOME SPECIALIZATIONS LIST --&gt;
+          &lt;ul class="specializations-list" data-wow-delay="0.35s"&gt;
+            ...
+          &lt;/ul&gt;
+
+          &lt;!-- #HOME BUTTON --&gt;
+          &lt;div class="xlg-padder wow fadeInUp" data-wow-delay="0.35s"&gt;
+            &lt;a href="#portfolio" id="splitted-home-btn" class="btn hollow"&gt;see my work&lt;/a&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- #HOME PHOTO BLOCK --&gt;
+        &lt;div class="table-cell v-bottom"&gt;
+          &lt;img src="..." class="img-responsive wow fadeIn" data-wow-delay="0.35s" style="margin-bottom:-3px; width: 80%;" alt="#"&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre><br><br>
+
+<em>background gradient home (v1.1)</em>
+<pre><code>&lt;section id="home" class="text-center no-overflow gradient"&gt;
+
+  &lt;div class="container text-center"&gt;
+
+    &lt;!-- FULLSCREEN HOLDER --&gt;
+    &lt;div class="fullscreen inline-block"&gt;
+      
+      &lt;!-- TABLE LAYOUT --&gt;
+      &lt;div class="table" style="height: 100%; margin-top: -70px;"&gt;
+        
+        &lt;!-- TABLE CELL --&gt;
+        &lt;div class="table-cell v-middle"&gt;
+
+          &lt;!-- #HOME PERSONAL PHOTO --&gt;
+          &lt;div class="lg-rounded-box home__image-box"&gt;...&lt;/div&gt;
+
+          &lt;!-- #HOME NAME --&gt;
+          &lt;h1 class="heavy text-uppercase home__name"&gt;...&lt;/h1&gt;
+
+          &lt;!-- #HOME PROFESSION NAME --&gt;
+          &lt;span class="text-uppercase small home__profession"&gt;...&lt;/span&gt;
+
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;!-- #SCROLL ANIMATION COMPONENT --&gt;
+      &lt;div class="rings"&gt;
+        &lt;span&gt;scroll&lt;/span&gt;
+        &lt;div class="ring ring-1"&gt;&lt;/div&gt;
+        &lt;div class="ring ring-2"&gt;&lt;/div&gt;
+        &lt;div class="ring ring-3"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre><br><br>
+
+							<b>Naviagtion</b> : 
+							<br><br>Main page navigation menu and here its markup <br><br>
+<pre><code>&lt;!-- NAVIGATION CONTROLS --&gt;
+&lt;div class="navbar-cell tight"&gt;
+  &lt;div class="navbar-header"&gt;
+    &lt;div&gt;
+
+      &lt;!-- #NAVIGATION HIRE BUTTON --&gt;
+      &lt;a href="#contact" class="btn btn-hire btn--main-inverted"&gt;
+        &lt;i class="fa fa-briefcase"&gt;&lt;/i&gt;&lt;!--
+        --&gt;&lt;span&gt;hire me&lt;/span&gt;
+      &lt;/a&gt;
+
+      &lt;!-- #NAVIGATION TOGGLE BUTTON --&gt;
+      &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1"&gt;
+        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+        &lt;span class="fa fa-bars normal"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- #NAVIGATION MENU --&gt;
+&lt;div class="navbar-cell stretch"&gt;
+  &lt;div class="collapse navbar-collapse" id="navbar-collapse-1"&gt;
+    &lt;div class="navbar-cell"&gt;
+    &lt;ul class="nav navbar-nav ..."&gt;
+      &lt;li&gt;
+        &lt;a href="#..."&gt;
+          &lt;i class="fa fa-* fa-fw"&gt;&lt;/i&gt;
+          &lt;span&gt;...&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;&lt;!-- /.navbar-collapse --&gt;        
+&lt;/div&gt;</code></pre><br><br>
+
+							<b>Profile section</b> : 
+							<br><br>This section consists of the personal information, photo, and a little about you and here its markup <br><br>
+<pre><code>&lt;section id="profile" class="main-block"&gt;
+  &lt;div class="container  text-center"&gt;
+  
+    &lt;!-- #PROFILE TITLE --&gt;
+    &lt;div class="main-title text-left"&gt;...&lt;/div&gt;
+
+    &lt;!-- #PROFILE CONTENT --&gt;
+    &lt;div class="row main-block__padder text-left"&gt;
+      
+      &lt;!-- #PROFILE PHOTO --&gt;
+      &lt;div class="col-lg-4 col-md-6 col-lg-push-4 text-center"&gt;...&lt;/div&gt;
+
+      &lt;!-- #PROFILE PERSONAL INFO --&gt;
+      &lt;div class="col-lg-4 col-md-6 col-lg-push-4 info-column"&gt;...&lt;/div&gt;  
+
+      &lt;!-- #PROFILE STORY --&gt;
+      &lt;div class="col-lg-4 col-lg-pull-8 col-xs-12 text-left story-column"&gt;...&lt;/div&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre><br><br>
+
+							<b>Hobbies section</b> : 
+							<br><br>Contains mix of icons and text representing your hobbies and here its markup <br><br>
+<pre><code>&lt;section id="hobbies" class="secondary-block secondary-block-spacer"&gt;
+  &lt;div class="container"&gt;
+  
+    &lt;!-- #HOBBIES TITLE --&gt;
+    &lt;div class="text-center widget-title"&gt;...&lt;/div&gt;
+
+    &lt;!-- #HOBBIES CONTENT --&gt;
+    &lt;div class="secondary-block__padder text-center"&gt;
+      &lt;ul class="list-inline inline-block text-uppercase list-gutter-md text-center text-uppercase hobbies-list"&gt;
+        &lt;li class="lg-rounded-box"&gt;
+
+          &lt;!-- HOBBY --&gt;
+          &lt;div class="inline-block"&gt;
+            &lt;span class="h3 lh"&gt;
+              &lt;i class="fa fa-*"&gt;&lt;/i&gt;
+            &lt;/span&gt;
+            &lt;h6 class="padder normal lh"&gt;...&lt;/h6&gt;
+          &lt;/div&gt;
+
+          &lt;!-- HOOBY DESCRIPTION --&gt;
+          &lt;div class="hobby-description"&gt;
+            &lt;p&gt;
+              ...
+            &lt;/p&gt;
+          &lt;/div&gt;
+
+        &lt;/li&gt;
+        ...
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre><br><br>
+
+							<b>Resume section</b> : 
+							<br><br>It contains the education, experience and recognition timelines and here its markup <br><br>
+<pre><code>&lt;section id="resume" class="main-block"&gt;
+  &lt;div class="container text-center"&gt;
+    
+    &lt;!-- #RESUME TITLE --&gt;
+    &lt;div class="main-title text-left"&gt;...&lt;/div&gt;
+
+    &lt;!-- #EDUCATION --&gt;
+    &lt;div class="main-block__padder text-left"&gt;
+      
+      &lt;!-- @EDUCATION TITLE --&gt;
+      &lt;div class="table"&gt;...&lt;/div&gt;
+
+      &lt;!-- @EDUCATION TIMELINE --&gt;
+      &lt;div class="main-block__sub-padder"&gt;...&lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;!-- #EXPERIENCE --&gt;
+    &lt;div class="main-block__padder text-left"&gt;
+      
+      &lt;!-- @EXPERIENCE TITLE --&gt;
+      &lt;div class="table"&gt;...&lt;/div&gt;
+
+      &lt;!-- @EXPERIENCE TIMELINE --&gt;
+      &lt;div class="main-block__sub-padder"&gt;...&lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;!-- #RECOGNITION --&gt;
+    &lt;div class="main-block__padder text-left"&gt;
+      
+      &lt;!-- @RECOGNITION TITLE --&gt;
+      &lt;div class="table"&gt;...&lt;/div&gt;
+
+      &lt;!-- @RECOGNITION TIMELINE --&gt;
+      &lt;div class="main-block__sub-padder"&gt;...&lt;/div&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre><br><br>
+
+							<b>Milestones section</b> : 
+							<br><br>contains the counterup for what you've achieved so far and here its markup <br><br>
+<pre><code>&lt;section id="milestones" class="secondary-block-spacer"&gt;
+    
+  &lt;!-- #MILESTONES LIST --&gt;
+  &lt;ul class="list-unstyled text-center text-uppercase milestones-list"&gt;
+    &lt;li&gt;
+      &lt;div class="mega"&gt;
+        &lt;i class="fa fa-fw fa-*"&gt;&lt;/i&gt;
+      &lt;/div&gt;
+      &lt;h1 class="heavy lh md-padder" data-from="..." data-to="..."&gt;...&lt;/h1&gt;
+      &lt;span class="lh inline-block semi-bold padder"&gt;...&lt;/span&gt;
+    &lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+
+&lt;/section&gt;</code></pre><br><br>
+
+							<b>Skills section</b> : 
+							<br><br>contains the skills meters and here its markup <br><br>
+<pre><code>&lt;section id="skills" class="main-block"&gt;
+  &lt;div class="container text-center"&gt;
+    
+    &lt;!-- #SKILLS TITLE --&gt;
+    &lt;div class="main-title text-left"&gt;...&lt;/div&gt;
+
+    &lt;!-- #SKILLS CONTENT --&gt;
+    &lt;div class="main-block__padder"&gt;
+      
+      &lt;!-- #SKILLS TABS --&gt;
+      &lt;ul class="nav nav-tabs text-uppercase small bold inline-block tabs-list" role="tablist"&gt;...&lt;/ul&gt;
+
+      &lt;!-- #SKILLS PANELS --&gt;
+      &lt;div class="main-block__sub-padder tab-content text-left"&gt;
+
+        &lt;!-- @CODING PANEL --&gt;
+        &lt;div class="row tab-pane active skills-list" id="skill-panel-1"&gt;...&lt;/div&gt;
+
+        &lt;!-- @DESIGN PANEL --&gt;
+        &lt;div class="row tab-pane skills-list" id="skill-panel-2"&gt;...&lt;/div&gt;
+
+        &lt;!-- @LANGUAGES PANEL --&gt;
+        &lt;div class="row tab-pane skills-list" id="skill-panel-3"&gt;...&lt;/div&gt;
+
+        &lt;!-- @KNOWLAGE PANEL --&gt;
+        &lt;div class="row tab-pane skills-list text-capitalize" id="skill-panel-4"&gt;...&lt;/div&gt;
+
+        &lt;!-- @PERSONAL PANEL --&gt;
+        &lt;div class="row tab-pane skills-list text-capitalize" id="skill-panel-5"&gt;...&lt;/div&gt;
+
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre><br><br>
+
+							<b>Services section</b> : 
+							<br><br>service container - what you offer your clients - and here its markup <br><br>
+<pre><code>&lt;section id="services" class="main-block"&gt;
+  &lt;div class="container text-center"&gt;
+    
+    &lt;!-- #SERVICES TITLE --&gt;
+    &lt;div class="main-title text-left"&gt;...&lt;/div&gt;
+
+    &lt;!-- #SERVICES CONTENT --&gt;
+    &lt;div class="main-block__padder text-left"&gt;
+      &lt;div class="row services-list"&gt;
+        &lt;div class="col-lg-5 col-md-6 col-lg-push-1 text-right clearfix"&gt;
+          &lt;div class="pull-right service-icon h4 rounded-box text-center"&gt;...&lt;/div&gt;
+        &lt;/div&gt;
+        ...
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre><br><br>
+
+							<b>Process section</b> : 
+							<br><br> and here its markup <br><br>
+<pre><code>&lt;section id="process"&gt;
+
+  &lt;!-- #OVERLAY --&gt;
+  &lt;div class="overlay"&gt;&lt;/div&gt;
+
+  &lt;div class="container"&gt;
+  
+    &lt;!-- #PROCESS TITLE --&gt;
+    &lt;div class="text-center widget-title"&gt;...&lt;/div&gt;
+
+    &lt;!-- #PROCESS CONTENT --&gt;
+    &lt;div class="secondary-block__padder text-center text-uppercase"&gt;
+      &lt;div class="horizontal-rail hidden-xs"&gt;&lt;/div&gt;
+      &lt;div class="row process-list"&gt;
+        &lt;div class="col-xs-4 col-sm-2"&gt;...&lt;/div&gt;
+        ...
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre><br><br>
+
+							<b>Work section</b> : 
+							<br><br>Contains portfolio items and here its markup <br><br>
+<pre><code>&lt;section id="portfolio" class="main-block"&gt;
+  &lt;div class="container text-center"&gt;
+    
+    &lt;!-- #PORTFOLIO TITLE --&gt;
+    &lt;div class="main-title text-left"&gt;...&lt;/div&gt;
+
+  &lt;/div&gt;
+
+  &lt;!-- #PORTFOLIO CONTENT --&gt;
+  &lt;div class="main-block__padder text-center"&gt;
+    
+    &lt;!-- #PORTFOLIO FILTER --&gt;
+    &lt;ul class="list-inline inline-block list-gutter-sm text-capitalize bold shuffle-filter"&gt;...&lt;/ul&gt;
+
+    &lt;!-- #PORTFOIO ITEMS --&gt;
+    &lt;div class="main-block__sub-padder"&gt;
+      &lt;div class="portfolio-items clearfix"&gt;
+        
+        &lt;!-- PORTFOLIO ITEM --&gt;
+        &lt;div class="portfolio-item" style="background-image: url(media/images/work/01.png);" data-groups='["all", "web-design"]'&gt;...&lt;/div&gt;
+
+        ....
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- #PORTFOLIO LOAD MORE --&gt;
+    &lt;div class="main-block__sub-padder" id="load-more-btn-holder"&gt;
+      &lt;a href="#" class="btn btn--main-color" id="load-more-btn"&gt;show more items&lt;/a&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/section&gt;</code></pre><br><br>
+
+							<b>Pricing section</b> : 
+							<br><br>Contains your pricing tables and here its markup <br><br>
+<pre><code>&lt;section id="pricing" class="main-block"&gt;
+  &lt;div class="container text-center"&gt;
+    
+    &lt;!-- #PRICING TITLE --&gt;
+    &lt;div class="main-title text-left"&gt;...&lt;/div&gt;
+
+    &lt;!-- #PRICING CONTENT --&gt;
+    &lt;div class="main-block__padder pricing-tables-list text-capitalize"&gt;
+
+      &lt;div class="pricing-table"&gt;...&lt;/div&gt;
+      ...
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre><br><br>
+
+							<b>Clients section</b> : 
+							<br><br>Contains clients logos and here its markup <br><br>
+<pre><code>&lt;section id="clients" class="secondary-block secondary-block-spacer"&gt;
+  &lt;div class="container"&gt;
+  
+    &lt;!-- #CLIENTS TITLE --&gt;
+    &lt;div class="text-center widget-title"&gt;...&lt;/div&gt;
+
+    &lt;!-- #CLIENTS CONTENT --&gt;
+    &lt;div class="secondary-block__padder"&gt;
+      &lt;div class="row text-center clients-list"&gt;
+        &lt;div class="col-lg-2 col-md-4 col-sm-6"&gt;
+          &lt;a href="#" class="client-logo-1"&gt;&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre><br><br>
+
+							<b>Testimonials</b> : 
+							<br><br>Contains your clients testimonials and here its markup <br><br>
+<pre><code>&lt;section id="testimonials"&gt;
+  
+  &lt;!-- #OVERLAY --&gt;
+  &lt;div class="overlay"&gt;&lt;/div&gt;
+
+  &lt;div class="container text-center"&gt;
+    
+    &lt;!-- #TESTIMONIAL HEADER --&gt;
+    &lt;div class="list-gutter-md testimonial-header"&gt;&lt;/div&gt;
+
+    &lt;!-- #TESTIMONIALS --&gt;
+    &lt;div class="col-md-8 col-md-push-2 secondary-block__sub-padder"&gt;
+
+      &lt;!-- QUOTES --&gt;
+      &lt;div class="quotes"&gt;
+
+        &lt;!-- ITEM --&gt;
+        &lt;div class="quote"&gt;&lt;/div&gt;
+
+        ...
+
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre><br><br>
+
+							<b>Contact section</b> : 
+							<br><br>Contains hire and contact forms and here its markup <br><br>
+<pre><code>&lt;section id="contact" class="main-block"&gt;
+  &lt;div class="container text-center"&gt;
+    
+    &lt;!-- #CONTACT TITLE --&gt;
+    &lt;div class="main-title text-left"&gt;...&lt;/div&gt;
+
+    &lt;!-- #CONTACT CONTENT --&gt;
+    &lt;div class="main-block__padder text-left"&gt;
+      
+      &lt;!-- #CONTACT TABS --&gt;
+      &lt;div class="text-center contact-tabs-holder"&gt;...&lt;/div&gt;
+
+      &lt;!-- #CONTACT PANELS --&gt;
+      &lt;div class="main-block__sub-padder tab-content text-left"&gt;
+
+        &lt;!-- HIRE FORM --&gt;
+        &lt;div id="contact-panel-1" class="tab-pane active"&gt;...&lt;/div&gt;
+
+        &lt;!-- CONTACT FORM --&gt;
+        &lt;div id="contact-panel-2" class="tab-pane"&gt;...&lt;/div&gt;
+
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre><br><br>
+
+							<b>Footer</b> : 
+							<br><br>Contains social list and copyright text and here its markup <br><br>
+<pre><code>&lt;footer class="text-center secondary-block-spacer"&gt;
+
+  &lt;!-- #SOCIALS --&gt;
+  &lt;div class="xlg-padder"&gt;
+
+    &lt;!-- #FOOTER SOCIAL LIST --&gt;
+    &lt;ul class="list-inline hollow-social-menu h5 list-gutter-xs"&gt;...&lt;/ul&gt;
+
+  &lt;/div&gt;
+  
+  &lt;!-- #COPYRIGHT --&gt;
+  &lt;div class="xlg-padder text-capitalize"&gt;...&lt;/div&gt;
+
+&lt;/footer&gt;</code></pre><br><br>
+						</p>
+
+					</div>
+
+					<!-- ============================ -->
+					<!-- $CSS PART                    -->
+					<!-- ============================ -->
+
+					<div class="bs-docs-section">
+
+						<h1 id="s3" class="page-header">CSS Part</h1>
+
+						<!-- #CSS OVERVIEW -->
+						<!-- ================== -->
+
+						<h3 id="s3-1">Overview</h3>
+						<p>
+							Genio CSS files are very well organized to make it easy for you to find/edit/add/remove what you want. At the top of each file (main files only) you will find a detailed table of the whole file contents from the first line to the last just use <kbd>Ctrl/f</kbd> to navigate between different sections easily.
+						</p>
+
+						<!-- #CSS GENERAL -->
+						<!-- ================== -->
+
+						<h3 id="s3-2">General</h3>
+						<p>
+							This template by default uses 6 CSS files for the sake of the development these files are splitted as you see but if you are going to use this template for production purpose it's recommended to combine them all in one file to decrease page loading time and here is how they are implemented in the <code>&lt;head&gt;</code> tag at the top of the document:
+
+<pre><code>&lt;!-- ========================================= --&gt;
+&lt;!-- $STYLESHEETS                              --&gt;
+&lt;!-- ========================================= --&gt;
+
+&lt;link rel="stylesheet" href="css/bootstrap.min.css"&gt;
+&lt;link rel="stylesheet" href="css/font-awesome.min.css"&gt;
+&lt;link rel="stylesheet" href="css/animate.min.css"&gt;
+&lt;link rel="stylesheet" href="css/magnific-popup.css"&gt;
+&lt;link rel="stylesheet" href="css/base.css"&gt;
+&lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;link rel="stylesheet" href="css/skins/yellow.css"&gt;</code></pre>
+						</p>
+						<p>
+							Also you will find a css stylesheet used to implement open sans google font as following:
+<pre><code>&lt;!-- ========================================= --&gt;
+&lt;!-- $GOOGLE FONTS                             --&gt;
+&lt;!-- ========================================= --&gt;
+
+&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'&gt;</code></pre>
+						</p>
+
+						<p>
+							And now it is time to know what each file is necessary for: <br><br>
+
+							<b>bootstrap.min.css</b><br>
+							Boostrap framework file necessary for this template to look and function the way you see it.
+
+              <br><br><b>font-awesome.min.css</b><br>
+              Font icon CSS file containing all the classes you use in the HTML and the main styles for it.
+
+							<br><br><b>animate.min.css</b><br>
+							CSS animation library used for revealing content while scrolling with beautiful animation.
+
+							<br><br><b>magnific-popup.css</b><br>
+							Stylesheet for the portfolio lightbox plugin layout and general styles.
+
+              <br><br><b>base.css</b><br>
+              basic CSS styles for all template pages.
+
+							<br><br><b>style.css</b><br>
+							Main template CSS file needed for providing the layout and visual hierarchy as you see it.
+
+							<br><br><b>[skin-color].css</b><br>
+							Containing all template colors.
+
+						</p>
+
+						<!-- #CSS DETAILS -->
+						<!-- ================== -->
+
+						<h3 id="s3-3">Details</h3><br>
+
+						<h4 id="s3-3-1"><b>style.css</b></h4>
+						<p>
+							This file is the main template file. You will find a table of contents at the top and we are going in a quick overview of the function of each section: <br><br>
+							<b>$TYPOGRAPHY</b><br>
+							It contains the font sizes, families and styles and there responsive values that makes them adapt according to the device whether it is a desktop, tablet, phablet or phone. it also contains some helper classes that you can use across all the template like <code>.em</code> for italic text for more info open the file, navigate to the typography section and there you will find all the classes. <br>
+							<br><b>$HELPER CLASSES</b><br>
+							This section contains all the necessary helper classes needed for the layout and so on like display classes need for setting element display property for example if you need to set an element display property to table just us <code>.table</code> class, there are also classes for visibility and block aligning besides default bootstrap classes to know it just open the file, navigate to helper classes section and start digging. <br>
+							<br><b>$SPACING</b><br>
+							This section contains the necessary classes for the vertical & horizontal whitespace between elements and their different values on different devices, for example if you want to set the vertical white space on an element to 40px use the class <code>.xlg-padder</code>, for a complete list of classes just navigate to the spacing section and start digging.<br>
+							<br><b>$MODULES</b><br>
+							This section contains the styles for the repeated elements like main title, secondary titles, line titles, rounded boxes ... etc, for more information just navigate to the section and start digging. <br>
+							<br><b>other sections</b><br>
+							The remaining is the styles for each section like home, navigation, contact ... etc
+						</p>
+
+						<br><h4 id="s3-3-2"><b>skin.css</b></h4>
+						<p>
+							This file contains all template colors in one place to make changing color scheme to your desired colors is so easy task. This file is organized according to template colors and CSS properties for example if you want to edit the brown color you also need to define what CSS property you need to change color for, suppose it's background property, so here what you should do, navigate to brown color section find background property section and change the color from brown to whatever you want.so easy.
+<pre><code>find color name > find property name > change color</code></pre><br>
+							if you want to add color to an element here what you should do: <br><br>
+<pre><code>find color name > find property name > concatenate name</code></pre><br>
+						</p>
+
+					</div>
+
+					<!-- ============================ -->
+					<!-- $JS PART                     -->
+					<!-- ============================ -->
+
+					<div class="bs-docs-section">
+
+						<h1 id="s4" class="page-header">JS Part</h1>
+
+						<!-- #JS OVERVIEW -->
+						<!-- ================== -->
+
+						<h3 id="s4-1">Overview</h3>
+						<p>
+							Genio uses some jquery plugins to acheive its functionality also there is a cusomt script file file <code>script.js</code>, it's well organized and contains the necessary code to intaite the plugins and other cusomt functions. At the top this file you will find a detailed table of its contents just use <kbd>Ctrl/f</kbd> to navigate between different sections easily.
+						</p>
+
+						<!-- #JS GENERAL -->
+						<!-- ================== -->
+
+						<h3 id="s4-2">General</h3>
+						<p>
+							This template by default uses 10 JS files for the sake of the development these files are splitted as you see but if you are going to use this template for production purpose i recommend to combine them all into the minimum possible number of js files to decrease page loading time and here is how they are implemented at the end of <code>&lt;body&gt;</code> tag:
+
+<pre><code>&lt;!-- ========================================= --&gt;
+&lt;!-- $SCRIPTS                                  --&gt;
+&lt;!-- ========================================= --&gt;
+
+&lt;!-- #LIBS --&gt;
+&lt;script src="js/libs/jquery-latest.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/libs/modernizr-latest.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/libs/bootstrap.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- #PLUGINS --&gt;
+&lt;script src="js/plugins/jquery.malihu.PageScroll2id.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/plugins/jquery.shuffle.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/plugins/jquery.sticky-kit.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/plugins/jquery.magnific-popup.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/plugins/jquery.quovolver.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/plugins/jquery.inview.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/plugins/jquery.countTo.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- #CUSTOM --&gt;
+&lt;script src="js/script.js"&gt;&lt;/script&gt;</code></pre>
+						</p>
+
+						<p>
+							And now it is time to know what each file is necessary for: <br><br>
+
+							<b>jquery-latest.min.js</b><br>
+							JavaScript Framework.
+
+							<br><br><b>modernizr-latest.min.js</b><br>
+							Browser features detection library.
+
+							<br><br><b>bootstrap.min.js</b><br>
+							Bootstrap JavaScript file which contains bootstrap plugins.
+
+							<br><br><b>jquery.malihu.PageScroll2id.min.js</b><br>
+							Smoothscroll to page sections.
+
+							<br><br><b>jquery.shuffle.min.js</b><br>
+							Filter portfolio items with animation.
+
+							<br><br><b>jquery.sticky-kit.min.js</b><br>
+							Necessary plugin for fixing navigation while scrolling.
+
+							<br><br><b>jquery.quovolver.min.js</b><br>
+							Testimonials rotator.
+
+							<br><br><b>jquery.inview.min.js</b><br>
+							Used to detect when an element show in the viewport.
+
+							<br><br><b>jquery.countTo.min.js</b><br>
+							Countup numbers.
+						</p>
+
+						<!-- #JS DETAILS -->
+						<!-- ================== -->
+
+						<h3 id="s4-3">Details</h3>
+						<p>
+							The main JavaScript file is <code>script.js</code> which simply contains all plugins calls and 2 custom function and here is their concept: <br><br>
+							<b>Load timeline items</b><br><br>
+							Used show timeline items when clicking the small plus icon at the end of the timeline rail line.
+<pre><code>Check for .hidden class > on click show all hidden</code></pre><br><br>
+							<b>Show more items in work section</b><br><br>
+							Used to show specific number of items when clicking show more items button untill there are no items left to show then hide the show more button.
+<pre><code>Check for .hidden class > load specified number of items > get data-bg-src > set background > show</code></pre>
+						</p>
+
+					</div>
+
+					<!-- ============================ -->
+					<!-- $PHP PART                    -->
+					<!-- ============================ -->
+
+					<div class="bs-docs-section">
+
+						<h1 id="s5" class="page-header">PHP Part</h1>
+						<p>
+							The only part using PHP in this template is the contact forms ( hire and message forms ) if you take a look at the <b>inc folder</b> you will find 4 files the only one that you need to change is <b>config.php</b> which requires providing contact and hire emails, you want to receive emails at. Also you should note that you can provide more that one email for each form type.
+						</p>
+
+						<!-- #REQUIREMENTS -->
+						<!-- ================== -->
+
+						<h3 id="s5-1">Requirements</h3><br>
+						<ul>
+							<li>PHP Version 5.x or higher.</li>
+							<li>PHP mail function enabled.</li>
+						</ul>
+
+						<!-- #INSTALLATION -->
+						<!-- ================== -->
+
+						<h3 id="s5-2">Form Installation</h3><br>
+<ul>
+	<li>Open up <code>inc/contact/config.php</code> with your text editor and fill in your emails.</li>
+	<li>For single email, it should look like this:</li><br>
+<pre>$contact_emails = 'contact_email@example.com';
+$hire_me_emails = 'hire_email@example.com';</pre><br>
+	<li>For multi emails, it should look like this:</li><br>
+<pre>$contact_emails = 'contact_email@example.com, another_contact@example.com';
+$hire_me_emails = 'hire_email@example.com, another_hire@example.com';</pre>
+</ul>
+
+
+					</div>
+
+					<!-- ============================ -->
+					<!-- $HOW-TO'S                    -->
+					<!-- ============================ -->
+
+					<div class="bs-docs-section">
+
+						<h1 id="s6" class="page-header">How-to's</h1>
+
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading1">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#c1" aria-expanded="false" aria-controls="collapseOne">
+											<b>How to setup contact form ?</b>
+										</a>
+									</h4>
+								</div>
+								<div id="c1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+									<div class="panel-body">
+										<p>
+											refer to the <b>php part</b> > installation section in this page.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading2">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#c2" aria-expanded="false" aria-controls="collapseOne">
+											<b>How to add a new hidden work item ?</b>
+										</a>
+									</h4>
+								</div>
+								<div id="c2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+									<div class="panel-body">
+										<p>
+											it is very easy just copy the code below, put it to be the last item in <code>.portfolio-items</code> element, change the specified values in caps letters <br>
+<pre>&LT;!-- HIDDEN PORTFOLIO ITEM --&GT;
+&LT;div class="hidden" data-bg-src='PATH/TO/THUMBNAIL-IMAGE' data-groups='["all", "CATEGORY"]'&GT;
+  &LT;div class="item-caption"&GT;
+    &LT;div class="table"&GT;
+      &LT;div class="table-cell"&GT;
+        &LT;a href="PATH/TO/BIG-IMAGE" class="zoom-btn plus-icon plus-icon-big btn--main-inverted"&GT;&LT;/a&GT;
+        &LT;h6 class="text-uppercase normal md-padder"&GT;PROJECT TITLE HERE&LT;/h6&GT;
+        &LT;em class="serif"&GT;CATEGORY&LT;/em&GT;
+      &LT;/div&GT;
+    &LT;/div&GT;
+  &LT;/div&GT;
+&LT;/div&GT;</pre>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading3">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#c3" aria-expanded="false" aria-controls="collapseOne">
+											<b>How to insert new main section ?</b>
+										</a>
+									</h4>
+								</div>
+								<div id="c3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+									<div class="panel-body">
+										<p>
+											copy the code below, paste after any <code>&lt;section&gt;</code> in the html page then chage the caps values with yours: <br>
+<pre>&lt;section id="ID" class="main-block"&gt;
+  &lt;div class="container text-center"&gt;
+    
+    &lt;!-- #SECTION TITLE --&gt;
+    &lt;div class="main-title text-left"&gt;
+      &lt;div class="main-title__inner"&gt;
+        &lt;div class="text-right main-title__left"&gt;
+          &lt;i class="fa fa-**** mega"&gt;&lt;/i&gt;
+          &lt;h1 class="text-uppercase heavy lh padder"&gt;COLORED TITLE&lt;/h1&gt;
+          &lt;em class="h5 serif em text-capitalize regular"&gt;MUTED DESCRIPTION&lt;/em&gt;
+        &lt;/div&gt;
+        &lt;div class="main-title__right"&gt;
+          &lt;p class="serif em regular h6"&gt;
+            ........
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- #SECTION CONTENT --&gt;
+    &lt;div class="main-block__padder text-left"&gt;
+      .....
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;</pre>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading4">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#c4" aria-expanded="false" aria-controls="collapseOne">
+											<b>How to insert new secondary section ?</b>
+										</a>
+									</h4>
+								</div>
+								<div id="c4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+									<div class="panel-body">
+										<p>
+											Copy the code below, paste in your html after any <code>&lt;section&gt;</code> then chage the caps values with yours <br>
+<pre>&LT;section id="ID" class="secondary-block secondary-block-spacer"&GT;
+  &LT;div class="container"&GT;
+  
+    &LT;!-- #SECTION TITLE --&GT;
+    &LT;div class="text-center widget-title"&GT;
+      &LT;h5 class="text-uppercase semi-bold lh md-padder"&GT;TITLE&LT;/h5&GT;
+      &LT;em class="xs-padder inline-block"&GT;SMALL DESCRIPTION&LT;/em&GT;
+    &LT;/div&GT;
+
+    &LT;!-- #SECTION CONTENT --&GT;
+    &LT;div class="secondary-block__padder text-center"&GT;
+      ...
+    &LT;/div&GT;
+
+  &LT;/div&GT;
+&LT;/section&GT;</pre>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading5">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#c5" aria-expanded="false" aria-controls="collapseOne">
+											<b>how to change values of counter ?</b>
+										</a>
+									</h4>
+								</div>
+								<div id="c5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+									<div class="panel-body">
+										<p>
+											just navigate to milestones section and change values of <code>data-from</code> and <code>data-to</code> on each milestone item
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading6">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#c6" aria-expanded="false" aria-controls="collapseOne">
+											<b>how to change skills bar ?</b>
+										</a>
+									</h4>
+								</div>
+								<div id="c6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+									<div class="panel-body">
+										<p>
+											navigate to skills section find the item you want to change then add/remove <code>class="on"</code>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading7">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#c7" aria-expanded="false" aria-controls="collapseOne">
+											<b>how to change skin ?</b>
+										</a>
+									</h4>
+								</div>
+								<div id="c7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+									<div class="panel-body">
+										<p>
+											open up the HTML file you want to change its skin, in the <code>&lt;head&gt;</code> tag at the stylesheets section replace the last css file which maybe <code>yellow.css</code>, <code>blue.css</code> etc...
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading8">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#c8" aria-expanded="false" aria-controls="collapseOne">
+											<b>how to go online ?</b>
+										</a>
+									</h4>
+								</div>
+								<div id="c8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
+									<div class="panel-body">
+										<p>
+											01. After unzip the download pack, you'll found a Template Folder with all the files. <br>
+02. You can view this Template in any browser, you can display or edit the Template without an internet connection.<br>
+03. The only section that will not work is the Contact Section which contains PHP code and requires a server enviroment for send messages.<br>
+04. Now open your FTP Client (like Filezilla) and upload the content of the Template on your server root.<br>
+05. Once the files are done uploading go to www.yourdomainname.com/index.html
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<!-- ============================ -->
+					<!-- $PSD FILES                   -->
+					<!-- ============================ -->
+
+					<div class="bs-docs-section">
+
+						<h1 id="s7" class="page-header">PSD Files</h1>
+						<p>This template comes with 2 PSD files included in <b>PSD folder</b> called <code>Genio.psd</code> & <code>Home Section 2.psd</code>. The PSD Design is based on 1170px Grid System. It is fully layered & well organized which makes editing very easy task.</p>
+
+					</div>
+
+					<!-- ============================ -->
+					<!-- $CHANGELOG                   -->
+					<!-- ============================ -->
+
+					<div class="bs-docs-section">
+
+						<h1 id="s10" class="page-header">Changelog</h1>
+            <b>v1.3</b>
+<pre><code>* Add blog.html page
+* Added post.html page
+* Added 404.html page
+* Added search.html page
+* Added blank.html page
+* fixed a bug in base.css file to allow replacing button with logo or brand name</code></pre>
+            <b>v1.2</b>
+<pre><code>* Add 3 new skins ( green, purple and mint )</code></pre>
+						<b>v1.1</b>
+<pre><code>* Add new home version( background gradient home )
+* Added new social items style (facebook, wordpress, blog, linkedin)</code></pre>
+
+					</div>
+
+					<!-- ============================ -->
+					<!-- $CREDITS                     -->
+					<!-- ============================ -->
+
+					<div class="bs-docs-section">
+
+						<h1 id="s8" class="page-header">Credits</h1><br>
+						<strong>Images</strong> - Not Included<br><br>
+						<ul>
+              <li><a href="https://dribbble.com/batizt">Baptiste CAYOL</a></li>
+              <li><a href="https://dribbble.com/MagnetWeb">MagnetWeb</a></li>
+              <li><a href="https://dribbble.com/kay486">TM</a></li>
+              <li><a href="https://dribbble.com/mvenetucci">Michelle Venetucci</a></li>
+              <li><a href="https://dribbble.com/bradenmackey">Braden Mackey</a></li>
+              <li><a href="https://dribbble.com/fuya">Fuya</a></li>
+              <li><a href="https://dribbble.com/sunfeelin">Pavel Tiunov</a></li>
+              <li><a href="https://dribbble.com/andrewcolinbeck">Andrew Colin</a></li>
+              <li><a href="http://photodune.net/">Photodune</a></li>
+						</ul>
+						<br>
+						<strong>Fonts</strong><br><br>
+						<ul>
+							<li><a target="_blank" href="http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans">Open Sans</a></li>
+							<li><a target="_blank" href="http://fortawesome.github.io/Font-Awesome">FontAwesome</a></li>
+						</ul>
+						<br>
+						<strong>JavaScript</strong><br><br>
+						<ul>
+              <li><a href="http://jquery.com">jQuery</a></li>
+              <li><a href="http://modernizr.com">Modernizr</a></li>
+              <li><a href="http://dimsemenov.com/plugins/magnific-popup">Magnific Popup</a></li>
+              <li><a href="http://manos.malihu.gr/page-scroll-to-id">PageScroll2id</a></li>
+              <li><a href="http://sebnitu.github.io/Quovolver">Quovolver</a></li>
+              <li><a href="http://vestride.github.io/Shuffle">Shuffle</a></li>
+              <li><a href="http://leafo.net/sticky-kit">Sticky Kit</a></li>
+              <li><a href="https://github.com/mhuggins/jquery-countTo">CountTo</a></li>
+              <li><a href="https://github.com/protonet/jquery.inview">Inview</a></li>
+              <li><a href="https://github.com/davatron5000/FitVids.js">FitVids</a></li>
+              <li><a href="https://github.com/viljamis/ResponsiveSlides.js">ResponsiveSlides</a></li>
+              <li><a href="https://github.com/fatlinesofcode/jquery.smoothwheel">Smoothwheel</a></li>
+              <li><a href="https://github.com/matthieua/WOW">WOW</a></li>
+              <li><a href="https://github.com/ftlabs/fastclick">FastClick</a></li>
+              <li><a href="https://github.com/markdalgleish/stellar.js/">Stellar</a></li>
+						</ul>
+						<br>
+						<strong>CSS</strong><br><br>
+						<ul>
+							<li><a target="_blank" href="http://getbootstrap.com/getting-started/">Bootstrap</a></li>
+							<li><a target="_blank" href="http://daneden.github.io/animate.css/">Animate</a></li>
+						</ul>
+						<br>
+						<strong>PHP</strong><br><br>
+						<ul>
+							<li>
+								<a target="_blank" href="http://codecanyon.net/user/Clivern">Hire & Contact Forms</a>
+							</li>
+						</ul>
+						<br>
+
+					</div>
+
+					<!-- ============================ -->
+					<!-- $SUPPORT                     -->
+					<!-- ============================ -->
+
+					<div class="bs-docs-section">
+
+						<h1 id="s9" class="page-header">Support</h1>
+						<p>
+							Customer satisfaction is our top priority, don’t hesitate to contact us if you need any assistance. Just email us via <a target="_blank" href="http://themeforest.net/user/krazicode">our profile page contact form</a> and we will try to reply within 24 hour.
+						</p>
+
+					</div>
+
+				</div>
+
+				<!-- ============================ -->
+				<!-- $NAVIGATION                  -->
+				<!-- ============================ -->
+
+				<div class="col-md-3">
+					<div id="sidenav" class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top" data-spy="affix" data-offset-top="253" data-offset-top="200" role="complementary">
+						<ul class="nav bs-docs-sidenav">
+							<li>
+								<a href="#s0">Overview</a>
+							</li>
+							<li>
+								<a href="#s1">Files & Folders</a>
+							</li>
+							<li>
+								<a href="#s2">HTML Part</a>
+								<ul class="nav">
+									<li>
+										<a href="#s2-1">Overview</a>
+									</li>
+									<li>
+										<a href="#s2-2">General</a>
+									</li>
+									<li>
+										<a href="#s2-3">Details</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#s3">CSS Part</a>
+								<ul class="nav">
+									<li>
+										<a href="#s3-1">Overview</a>
+									</li>
+									<li>
+										<a href="#s3-2">General</a>
+									</li>
+									<li>
+										<a href="#s3-3">Details</a>
+										<ul class="nav">
+											<li>
+												<a href="#s3-3-1">style.css</a>
+											</li>
+											<li>
+												<a href="#s3-3-2">skin.css</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#s4">JS Part</a>
+								<ul class="nav">
+									<li>
+										<a href="#s4-1">Overview</a>
+									</li>
+									<li>
+										<a href="#s4-2">General</a>
+									</li>
+									<li>
+										<a href="#s4-3">Details</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#s5">PHP Part</a>
+								<ul class="nav">
+									<li>
+										<a href="#s5-1">Requirements</a>
+									</li>
+									<li>
+										<a href="#s5-2">Form Installation</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#s6">How-to's</a>
+							</li>
+							<li>
+								<a href="#s7">PSD Files</a>
+							</li>
+							<li>
+								<a href="#s10">Changelog</a>
+							</li>
+							<li>
+								<a href="#s8">Credits</a>
+							</li>
+							<li>
+								<a href="#s9">Support</a>
+							</li>
+							<li>
+								<a target="_blank" href="http://themeforest.net/user/krazicode">Contact</a>
+							</li>
+						</ul><br>
+						<p>
+							<b>Please don't forget to rate us <img src="assets/images/stars.png" alt=""> it really helps</b>
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- ============================ -->
+		<!-- $FOOTER                      -->
+		<!-- ============================ -->
+
+		<footer class="bs-docs-footer" role="contentinfo">
+			<p>
+				Theme made by <a target="_blank" href="http://themeforest.net/user/krazicode">Krazicode</a>.
+				This docs page uses <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> documentation licensed under <a target="_blank" href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+			</p>
+		</footer>
+
+		<!-- ============================ -->
+		<!-- $SCRIPTS                     -->
+		<!-- ============================ -->
+		
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+	</body>
+</html>

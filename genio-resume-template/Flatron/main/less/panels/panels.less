@@ -1,0 +1,229 @@
+// $VARIABLES
+// ========================================
+
+// #layout
+@panel-body-padding                 : 1.2em 1.8em;
+@panel-heading-padding              : 1.2em 1.8em;
+@panel-footer-padding               : 1.2em 1.8em;
+@panel-border-width                 : 1px;
+@panel-collapse-bottom-spacing      : 5px;
+
+// #typography
+@panel-font-size                    : @font-size-base;
+@panel-line-height                  : @line-height-base;
+@panel-title-font-size              : 18px;
+
+// #colors
+@panel-bg                           : transparent;
+@panel-footer-bg                    : transparent;
+@table-border-color                 : @black-10;
+@panel-inner-border                 : @black-10;
+
+@panel-default-heading-bg           : @default-color; 
+@panel-default-text                 : darken(@panel-default-heading-bg, 30%); 
+@panel-default-border               : @panel-default-heading-bg; 
+@panel-primary-heading-bg           : @primary-color; 
+@panel-primary-text                 : darken(@panel-primary-heading-bg, 30%); 
+@panel-primary-border               : @panel-primary-heading-bg; 
+@panel-success-heading-bg           : @success-color; 
+@panel-success-text                 : darken(@panel-success-heading-bg, 30%); 
+@panel-success-border               : @panel-success-heading-bg; 
+@panel-info-heading-bg              : @info-color; 
+@panel-info-text                    : darken(@panel-info-heading-bg, 30%); 
+@panel-info-border                  : @panel-info-heading-bg; 
+@panel-warning-heading-bg           : @warning-color; 
+@panel-warning-text                 : darken(@panel-warning-heading-bg, 30%); 
+@panel-warning-border               : @panel-warning-heading-bg; 
+@panel-danger-heading-bg            : @danger-color; 
+@panel-danger-text                  : darken(@panel-danger-heading-bg, 30%); 
+@panel-danger-border                : @panel-danger-heading-bg; 
+
+// $MIXINS
+// ========================================
+
+.panel-variant(@border; @heading-text-color; @heading-bg-color) 
+{
+	border-color: @border;
+
+	& > .panel-heading 
+	{
+		color: @heading-text-color;
+		background-color: @heading-bg-color;
+		border-color: @heading-bg-color;
+
+		+ .panel-collapse > .panel-body { border-top-color: @border; }
+		.badge 
+		{
+			color: @heading-bg-color;
+			background-color: @heading-text-color;
+		}
+	}
+	& > .panel-footer 
+	{
+		+ .panel-collapse > .panel-body { border-bottom-color: @border; }
+	}
+}
+
+// $STYLES
+// ========================================
+
+// Base class
+.panel 
+{
+	background-color: @panel-bg;
+	border: @panel-border-width solid transparent;
+}
+
+// Panel contents
+.panel-body 
+{
+	padding: @panel-body-padding;
+	&:extend(.clearfix all);
+}
+
+// Optional heading
+.panel-heading 
+{
+	padding: @panel-heading-padding;
+	border-bottom: @panel-border-width solid transparent;
+
+	> .dropdown .dropdown-toggle { color: inherit;}
+}
+
+// Within heading, strip any `h*` tag of its default margins for spacing.
+.panel-title 
+{
+	color: inherit;
+
+	> a { color: inherit; }
+}
+
+// Optional footer (stays gray in every modifier class)
+.panel-footer 
+{
+	padding: @panel-footer-padding;
+	background-color: @panel-footer-bg;
+	border-top: @panel-border-width solid @panel-inner-border;
+}
+
+
+// List groups in panels
+.panel 
+{
+	> .list-group,
+	> .panel-collapse > .list-group 
+	{
+
+		.list-group-item { border-width: 1px 0; }
+
+		// Add border top radius for first one
+		&:first-child 
+		{
+			.list-group-item:first-child { border-top: 0; }
+		}
+
+		// Add border bottom radius for last one
+		&:last-child 
+		{
+			.list-group-item:last-child { border-bottom: 0; }
+		}
+	}
+}
+
+// Collapse space between when there's no additional content.
+.panel-heading + .list-group 
+{
+	.list-group-item:first-child { border-top-width: 0; }
+}
+
+.list-group + .panel-footer { border-top-width: 0; }
+
+// Tables in panels
+.panel 
+{
+	> .table,
+	> .table-responsive > .table,
+	> .panel-collapse > .table 
+	{
+		caption 
+		{
+			padding-left: @panel-body-padding;
+			padding-right: @panel-body-padding;
+		}
+	}
+
+	> .panel-body + .table,
+	> .panel-body + .table-responsive,
+	> .table + .panel-body,
+	> .table-responsive + .panel-body { border-top: 1px solid @table-border-color; }
+
+	> .table > tbody:first-child > tr:first-child th,
+	> .table > tbody:first-child > tr:first-child td  { border-top: 0; }
+
+	> .table-bordered,
+	> .table-responsive > .table-bordered 
+	{
+		border: 0;
+
+		> thead,
+		> tbody,
+		> tfoot 
+		{
+			> tr 
+			{
+				> th:first-child,
+				> td:first-child { border-left: 0; }
+
+				> th:last-child,
+				> td:last-child  { border-right: 0; }
+			}
+		}
+		> thead,
+		> tbody 
+		{
+			> tr:first-child 
+			{
+				> td,
+				> th { border-bottom: 0; }
+			}
+		}
+		> tbody,
+		> tfoot 
+		{
+			> tr:last-child 
+			{
+				> td,
+				> th { border-bottom: 0; }
+			}
+		}
+	}
+	> .table-responsive { border: 0; }
+}
+
+// Collapsable panels (aka, accordion)
+.panel-group 
+{
+	.panel { margin-bottom: @panel-collapse-bottom-spacing; }
+
+	.panel-heading 
+	{
+		border-bottom: 0;
+
+		+ .panel-collapse > .panel-body,
+		+ .panel-collapse > .list-group { border-top: 1px solid @panel-inner-border; }
+	}
+
+	.panel-footer 
+	{
+		border-top: 0;
+		+ .panel-collapse .panel-body { border-bottom: @panel-border-width solid @panel-inner-border; }
+	}
+}
+
+// Contextual variations
+.panel-default { .panel-variant(@panel-default-border; @panel-default-text; @panel-default-heading-bg); }
+.panel-primary { .panel-variant(@panel-primary-border; @panel-primary-text; @panel-primary-heading-bg); }
+.panel-success { .panel-variant(@panel-success-border; @panel-success-text; @panel-success-heading-bg); }
+.panel-info    { .panel-variant(@panel-info-border; @panel-info-text; @panel-info-heading-bg); }
+.panel-warning { .panel-variant(@panel-warning-border; @panel-warning-text; @panel-warning-heading-bg); }
+.panel-danger  { .panel-variant(@panel-danger-border; @panel-danger-text; @panel-danger-heading-bg); }

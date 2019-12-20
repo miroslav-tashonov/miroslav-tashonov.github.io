@@ -1,0 +1,268 @@
+// $VARIABLES
+// ========================================
+
+// #layout
+@table-cell-padding                : 1em;
+@table-condensed-cell-padding      : 0.75em;
+@table-border-width                : 1px;
+
+// #colors
+@table-border-color                : @black-10;
+@table-bg                          : transparent;
+@table-caption-color               : @black-40;
+@table-bg-accent                   : lighten(@black-10, 3%);
+@table-bg-hover                    : lighten(@table-bg-accent, 5%);
+@table-bg-active                   : @table-bg-hover;
+@table-success-bg                  : @success-color;
+@table-info-bg                     : @info-color;
+@table-warning-bg                  : @warning-color;
+@table-danger-bg                   : @danger-color; 
+
+// $MIXINS
+// ========================================
+
+.table-row-variant(@state; @background) 
+{
+	// Exact selectors below required to override `.table-striped` and prevent
+	// inheritance to nested tables.
+	.table > thead > tr,
+	.table > tbody > tr,
+	.table > tfoot > tr 
+	{
+		> td.@{state},
+		> th.@{state},
+		&.@{state} > td,
+		&.@{state} > th 
+		{
+			background-color: @background;
+			color: darken(@background, 30%)
+		}
+	}
+
+	// Hover states for `.table-hover`
+	// Note: this is not available for cells or rows within `thead` or `tfoot`.
+	.table-hover > tbody > tr 
+	{
+		> td.@{state}:hover,
+		> th.@{state}:hover,
+		&.@{state}:hover > td,
+		&:hover > .@{state},
+		&.@{state}:hover > th { background-color: darken(@background, 5%); }
+	}
+}
+
+// $STYLES
+// ========================================
+
+table { background-color: @table-bg; }
+
+caption 
+{
+	padding-top: @table-cell-padding;
+	padding-bottom: @table-cell-padding;
+	color: @table-caption-color;
+	text-align: left;
+}
+
+th { text-align: left; }
+
+// Baseline styles
+.table 
+{
+	width: 100%;
+	max-width: 100%;
+
+	// Cells
+	> thead,
+	> tbody,
+	> tfoot 
+	{
+		> tr 
+		{
+			> th,
+			> td 
+			{
+				padding: @table-cell-padding;
+				vertical-align: top;
+				border-top: @table-border-width solid @table-border-color;
+			}
+		}
+	}
+
+	// Bottom align for column headings
+	> thead > tr > th 
+	{
+		vertical-align: bottom;
+		border-bottom: @table-border-width solid @table-border-color;
+	}
+
+	// Remove top border from thead by default
+	> caption + thead,
+	> colgroup + thead,
+	> thead:first-child 
+	{
+		> tr:first-child 
+		{
+			> th,
+			> td { border-top: 0; }
+		}
+	}
+
+	// Account for multiple tbody instances
+	> tbody + tbody { border-top: @table-border-width solid @table-border-color; }
+
+	// Nesting
+	.table { background-color: @body-bg; }
+}
+
+
+// Condensed table w/ half padding
+
+.table-condensed 
+{
+	> thead,
+	> tbody,
+	> tfoot 
+	{
+		> tr 
+		{
+			> th,
+			> td { padding: @table-condensed-cell-padding; }
+		}
+	}
+}
+
+
+// Bordered version
+//
+// Add borders all around the table and between all the columns.
+
+.table-bordered 
+{
+	border: @table-border-width solid @table-border-color;
+	> thead,
+	> tbody,
+	> tfoot 
+	{
+		> tr 
+		{
+			> th,
+			> td { border: @table-border-width solid @table-border-color; }
+		}
+	}
+	> thead > tr 
+	{
+		> th,
+		> td { border-bottom-width: @table-border-width; }
+	}
+}
+
+
+// Zebra-striping
+.table-striped 
+{
+	> tbody > tr:nth-child(odd) { background-color: @table-bg-accent; }
+}
+
+
+// Hover effect
+.table-hover 
+{
+	> tbody > tr:hover { background-color: @table-bg-hover;}
+}
+
+
+// Table cell sizing
+table col[class*="col-"] 
+{
+	position: static; // Prevent border hiding in Firefox and IE9/10 (see https://github.com/twbs/bootstrap/issues/11623)
+	float: none;
+	display: table-column;
+}
+
+table 
+{
+	td,
+	th 
+	{
+		&[class*="col-"] 
+		{
+			position: static; // Prevent border hiding in Firefox and IE9/10 (see https://github.com/twbs/bootstrap/issues/11623)
+			float: none;
+			display: table-cell;
+		}
+	}
+}
+
+
+// Table backgrounds
+.table-row-variant(active; @table-bg-active);
+.table-row-variant(success; @table-success-bg);
+.table-row-variant(info; @table-info-bg);
+.table-row-variant(warning; @table-warning-bg);
+.table-row-variant(danger; @table-danger-bg);
+
+
+// Responsive tables
+.table-responsive 
+{
+	overflow-x: auto;
+	min-height: 0.01%;
+
+	@media screen and (max-width: @screen-xs-max) 
+	{
+		width: 100%;
+		overflow-y: hidden;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		border: 1px solid @table-border-color;
+
+		// Tighten up spacing
+		> .table 
+		{
+
+			// Ensure the content doesn't wrap
+			> thead,
+			> tbody,
+			> tfoot 
+			{
+				> tr 
+				{
+					> th,
+					> td { white-space: nowrap; }
+				}
+			}
+		}
+
+		// Special overrides for the bordered tables
+		> .table-bordered 
+		{
+			border: 0;
+
+			// Nuke the appropriate borders so that the parent can handle them
+			> thead,
+			> tbody,
+			> tfoot 
+			{
+				> tr 
+				{
+					> th:first-child,
+					> td:first-child { border-left: 0; }
+
+					> th:last-child,
+					> td:last-child { border-right: 0; }
+				}
+			}
+
+			> tbody,
+			> tfoot 
+			{
+				> tr:last-child 
+				{
+					> th,
+					> td { border-bottom: 0;}
+				}
+			}
+
+		}
+	}
+}

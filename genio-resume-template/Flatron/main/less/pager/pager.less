@@ -1,0 +1,72 @@
+// $VARIABLES
+// ========================================
+
+// #layout
+@pager-border-radius        : 10em;
+@pager-vertical-padding     : 0.8em;
+@pager-horizontal-padding   : 1.2em;
+
+// #colors
+@pager-bg                   : @flat-gray;
+@pager-color                : lighten(@pager-bg, 40%);
+@pager-hover-bg             : darken(@pager-bg, 08%);
+@pager-disabled-color       : lighten(@pager-bg, 30%);
+@pager-disabled-bg          : lighten(@pager-bg, 20%);
+
+// $STYLES
+// ========================================
+
+.pager 
+{
+	padding-left: 0;
+	list-style: none;
+	text-align: center;
+	&:extend(.clearfix all);
+
+	li 
+	{
+		display: inline;
+
+		> a,
+		> span 
+		{
+			display: inline-block;
+			padding: @pager-vertical-padding @pager-horizontal-padding;
+			background-color: @pager-bg;
+			color: @pager-color;
+			border-radius: @pager-border-radius;
+		}
+
+		> a:hover,
+		> a:focus 
+		{
+			text-decoration: none;
+			background-color: @pager-hover-bg;
+		}
+	}
+
+	.next 
+	{
+		> a,
+		> span { float: right; }
+	}
+
+	.previous 
+	{
+		> a,
+		> span { float: left; }
+	}
+
+	.disabled 
+	{
+		> a,
+		> a:hover,
+		> a:focus,
+		> span 
+		{
+			color: @pager-disabled-color;
+			background-color: @pager-disabled-bg;
+			cursor: not-allowed;
+		}
+	}
+}

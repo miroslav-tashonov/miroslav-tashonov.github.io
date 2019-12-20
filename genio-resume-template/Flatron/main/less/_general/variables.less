@@ -1,0 +1,161 @@
+// $COLORS
+// ========================================
+
+// #color varient
+@red                          : #e74c3c;
+@orange                       : #e67e22;
+@yellow                       : #ffcd02;
+@sand                         : #d5c295;
+@nav-blue                     : #34495e;
+@flat-black                   : #2b2b2b;
+@magneta                      : #9b59b6;
+@teal                         : #3a6f81;
+@sky-blue                     : #3498db;
+@green                        : #2ecc71;
+@mint                         : #1abc9c;
+@flat-white                   : #ecf0f1;
+@flat-gray                    : #95a5a6;
+@forest-green                 : #345f41;
+@purple                       : #745ec5;
+@brown                        : #5e4534;
+@plum                         : #5e345e;
+@watermelon                   : #ef717a;
+@lime                         : #a5c63b;
+@pink                         : #f47cc3;
+@maroon                       : #79302a;
+@coffee                       : #a38671;
+@powder-blue                  : #b8c9f1;
+@night-blue                   : #5065a1;
+
+// #black & white
+@black                        : #000;
+@white                        : #fff;
+
+// #grayscale
+@black-10                     : darken(#fff, 10%);
+@black-20                     : darken(#fff, 20%);
+@black-30                     : darken(#fff, 30%);
+@black-40                     : darken(#fff, 40%);
+@black-50                     : darken(#fff, 50%);
+@black-60                     : darken(#fff, 60%);
+@black-70                     : darken(#fff, 70%);
+@black-80                     : darken(#fff, 80%);
+@black-90                     : darken(#fff, 90%);
+
+// #alert colors
+@success-color                : #8dde6e;
+@info-color                   : #73c1e7;
+@warning-color                : #f6de88;
+@danger-color                 : #e08a8a;
+
+// #main color
+@default-color                : @flat-gray;
+@primary-color                : @orange;
+
+// #social colors
+@twitter-color                : #00aced;
+@facebook-color               : #3b5998;
+@googleplus-color             : #dd4b39;
+@pinterest-color              : #cb2027;
+@linkedin-color               : #007bb6;
+@youtube-color                : #bb0000;
+@vimeo-color                  : #aad450;
+@tumblr-color                 : #32506d;
+@instagram-color              : #517fa4;
+@dribbble-color               : #ea4c89;
+@quora-color                  : #a82400;
+@foursquare-color             : #0072b1;
+@forrst-color                 : #5B9A68;
+@vk-color                     : #45668e;
+@wordpress-color              : #21759b;
+@stumbleupon-color            : #EB4823;
+@yahoo-color                  : #7B0099;
+@blogger-color                : #fb8f3d;
+@soundcloud-color             : #ff3a00;
+@behance-color                : #053eff;
+@delicious-color              : #205cc0;
+@flickr-blue-color            : #0063dc;
+@flickr-pink-color            : #ff0084;
+@kippt-color                  : #e03500;
+@linkility-color              : #144966;
+@path-color                   : #e41f11;
+@pocket-color                 : #ee4056;
+@rdio-color                   : #008fd5;
+@rss-color                    : #ee802f;
+@skype-color                  : #00aff0;
+@spotify-color                : #81b71a;
+
+// $PIXEL UNITS
+// ========================================
+
+@unit-pico                    : 5px;
+@unit-nano                    : 10px;
+@unit-micro                   : 15px;
+@unit-milli                   : 20px;
+@unit-centi                   : 30px;
+@unit-deci                    : 40px;
+@unit                         : 60px;
+@unit-deca                    : 80px;
+@unit-hecto                   : 100px;
+@unit-kilo                    : 120px;
+@unit-mega                    : 140px;
+@unit-giga                    : 160px;
+@unit-tera                    : 180px;
+
+// $Z-INDEX MASTER LIST
+// ========================================
+
+@zindex-back                  : -1;
+@zindex-1000                  : 1000;
+@zindex-1100                  : 1100;
+@zindex-1200                  : 1200;
+@zindex-1300                  : 1300;
+@zindex-1400                  : 1400;
+@zindex-1500                  : 1500;
+
+// $MEDIA QURIES
+// ========================================
+
+@screen-xs                    : 480px;
+@screen-sm                    : 768px;
+@screen-md                    : 992px;
+@screen-lg                    : 1200px;
+@grid-float-breakpoint        : @screen-md;
+@grid-float-breakpoint-max    : (@grid-float-breakpoint - 1);
+
+// $TYPOGRAPHY
+// ========================================
+
+// #font sizes
+@font-size-base               : 14px;
+@font-size-h1                 : ceil((@font-size-base * 3.2));
+@font-size-h2                 : ceil((@font-size-base * 2.8));
+@font-size-h3                 : ceil((@font-size-base * 2.4));
+@font-size-h4                 : ceil((@font-size-base * 2));
+@font-size-h5                 : ceil((@font-size-base * 1.6));
+@font-size-h6                 : ceil((@font-size-base * 1.2));
+@font-size-small              : ceil((@font-size-base * 0.85));
+@font-size-micro              : ceil((@font-size-base * 0.75));
+
+// #line heights
+@line-height-base             : 1.618;  
+@line-height-lg               : 2;
+@line-height-md               : 1.4;
+@line-height-sm               : 1.2;
+@line-height-computed         : floor((@font-size-base * @line-height-base));
+
+// #icon font
+@icon-font-path               : "../fonts/fontawesome/";
+@icon-font-name               : "fontawesome-webfont";
+@icon-font-svg-id             : "fontawesomeregular";
+
+// #icon sizes
+@icon-normal                  : 16px;
+@icon-medium                  : 18px;
+@icon-large                   : 32px;
+
+// #border radius
+@border-radius-small          : 2px;
+@border-radius-medium         : 4px;
+@border-radius-large          : 6px;
+@border-radius-rounded        : 100em;

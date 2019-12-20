@@ -1,0 +1,39 @@
+.transition(...) 
+{
+  -webkit-transition: @arguments;
+     -moz-transition: @arguments;
+       -o-transition: @arguments;
+          transition: @arguments;
+}
+
+.transition-property(@transition-property) 
+{
+    -webkit-transition-property: @transition-property;
+          transition-property: @transition-property;
+}
+
+.transition-delay(@transition-delay) 
+{
+    -webkit-transition-delay: @transition-delay;
+          transition-delay: @transition-delay;
+}
+
+.transition-duration(@transition-duration) 
+{
+    -webkit-transition-duration: @transition-duration;
+          transition-duration: @transition-duration;
+}
+
+.transition-timing-function(@timing-function) 
+{
+    -webkit-transition-timing-function: @timing-function;
+          transition-timing-function: @timing-function;
+}
+
+.transition-transform(@transition) 
+{
+    -webkit-transition: -webkit-transform @transition;
+     -moz-transition: -moz-transform @transition;
+       -o-transition: -o-transform @transition;
+          transition: transform @transition;
+}

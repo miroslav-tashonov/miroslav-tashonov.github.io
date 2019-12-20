@@ -1,0 +1,56 @@
+// $VARIABLES
+// ========================================
+
+// #layout
+@blockquote-border-width   : 3px;
+@blockquote-padding        : @unit-milli;
+
+// #typography
+@blockquote-font-size      : @font-size-h6;
+@blockquote-font-family    : 'Georgia';
+@blockquote-font-style     : italic;
+
+// #colors
+@blockquote-border-color   : @sky-blue;
+
+// $STYLES
+// ========================================
+
+// #blockquotes
+blockquote 
+{
+	font-size: @blockquote-font-size;
+	font-family: @blockquote-font-family;
+	font-style: @blockquote-font-style;
+	border-left: @blockquote-border-width solid @blockquote-border-color;
+	padding: @blockquote-padding;
+
+	// account for citation
+	footer,
+	small,
+	.small 
+	{
+		display: block;
+		font-size: 80%; // back to default font-size
+
+		&:before { content: '\2014 \00A0'; }
+	}
+}
+
+// #opposite alignment of blockquote
+.blockquote-reverse,
+blockquote.pull-right 
+{
+	border-right: @blockquote-border-width solid @blockquote-border-color;
+	border-left: 0;
+	text-align: right;
+
+	// account for citation
+	footer,
+	small,
+	.small 
+	{
+		&:before { content: ''; }
+		&:after  { content: '\00A0 \2014'; }
+	}
+}

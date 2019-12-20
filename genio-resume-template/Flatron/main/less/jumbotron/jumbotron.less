@@ -1,0 +1,34 @@
+// $VARIABLES
+// ========================================
+
+@jumbotron-vertical-padding         : 5em;
+@jumbotron-horizontal-padding       : 5em;
+@jumbotron-color                    : @white;
+@jumbotron-bg                       : @purple;
+@jumbotron-heading-color            : @white;
+
+// $STYLES
+// ========================================
+
+.jumbotron 
+{
+	padding: @jumbotron-vertical-padding 0;
+	color: @jumbotron-color;
+	background-color: @jumbotron-bg;
+
+	h1, .h1  { color: @jumbotron-heading-color; }
+	
+	p { font-weight: 200; }
+
+	hr { border-top-color: lighten(@jumbotron-bg, 08%); }
+
+	.container { max-width: 100%; }
+
+	@media screen and (min-width: @screen-sm-min) 
+	{
+		.container-fluid & 
+		{
+			padding: @jumbotron-vertical-padding @jumbotron-horizontal-padding;
+		}
+	}
+}

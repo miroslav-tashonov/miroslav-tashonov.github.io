@@ -1,0 +1,52 @@
+// $VARIABLES
+// ========================================
+
+// #layout
+@breadcrumb-padding-vertical       : 1em;
+@breadcrumb-padding-horizontal     : 1em;
+@breadcrumb-item-spacing           : 1em;
+
+// #typography
+@breadcrumb-separator              :"\f105";
+@breadcrumb-line-height            : 1;
+@breadcrumb-font-family            : 'FontAwesome';
+
+// #colors
+@breadcrumb-link-color             : @black-40;
+@breadcrumb-bg                     : @white;
+@breadcrumb-separator-color        : @black-20;
+@breadcrumb-active-color           : @link-color;
+
+// $STYLES
+// ========================================
+
+.breadcrumb 
+{
+	padding: @breadcrumb-padding-vertical @breadcrumb-padding-horizontal;
+	list-style: none;
+	line-height: @breadcrumb-line-height;
+	background-color: @breadcrumb-bg;
+
+	> li 
+	{
+		display: inline-block;
+
+		a 
+		{
+			color: @breadcrumb-link-color;
+
+			&:hover { text-decoration: underline; }
+		}
+
+
+		+ li:before 
+		{
+			content: "@{breadcrumb-separator}\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+			padding: 0 @breadcrumb-item-spacing;
+			color: @breadcrumb-separator-color;
+			font-family: @breadcrumb-font-family;
+		}
+	}
+
+	> .active { color: @breadcrumb-active-color; }
+}

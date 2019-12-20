@@ -1,0 +1,82 @@
+// $VARIABLES
+// ========================================
+
+// #layout
+@label-horizontal-padding        : 0.3em;
+@label-vertical-padding          : 0.6em;
+
+// #colors
+@label-color                     : @white;
+@label-default-bg                : @flat-gray;
+@label-primary-bg                : @primary-color; 
+@label-success-bg                : @success-color; 
+@label-info-bg                   : @info-color; 
+@label-warning-bg                : @warning-color; 
+@label-danger-bg                 : @danger-color; 
+@label-red-bg                    : @red; 
+@label-magneta-bg                : @magneta; 
+@label-sky-blue-bg               : @sky-blue; 
+@label-green-bg                  : @green; 
+@label-mint-bg                   : @mint; 
+@label-purple-bg                 : @purple; 
+@label-lime-bg                   : @lime; 
+@label-pink-bg                   : @pink; 
+@label-coffee-bg                 : @coffee; 
+
+// $MIXINS
+// ========================================
+
+.label-variant(@color) 
+{
+	background-color: @color;
+
+	&[href] 
+	{
+		&:hover,
+		&:focus { background-color: darken(@color, 10%); }
+	}
+}
+
+// $STYLES
+// ========================================
+
+.label 
+{
+	display: inline;
+	padding: @label-horizontal-padding @label-vertical-padding;
+	font-size: 75%;
+	font-weight: bold;
+	line-height: 1;
+	color: @label-color;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: 0.25em;
+
+	// Empty labels collapse automatically (not available in IE8)
+	&:empty { display: none; }
+
+	// Quick fix for labels in buttons
+	.btn & 
+	{
+		position: relative;
+		top: -1px;
+	}
+}
+
+// Colors
+.label-default   { .label-variant(@label-default-bg); }       
+.label-primary   { .label-variant(@label-primary-bg); }       
+.label-success   { .label-variant(@label-success-bg); }       
+.label-info      { .label-variant(@label-info-bg); }    
+.label-warning   { .label-variant(@label-warning-bg); }       
+.label-danger    { .label-variant(@label-danger-bg); }      
+.label-red       { .label-variant(@label-red-bg); }   
+.label-magneta   { .label-variant(@label-magneta-bg); }       
+.label-sky-blue  { .label-variant(@label-sky-blue-bg); }        
+.label-green     { .label-variant(@label-green-bg); }     
+.label-mint      { .label-variant(@label-mint-bg); }    
+.label-purple    { .label-variant(@label-purple-bg); }      
+.label-lime      { .label-variant(@label-lime-bg); }    
+.label-pink      { .label-variant(@label-pink-bg); }    
+.label-coffee    { .label-variant(@label-coffee-bg); }      

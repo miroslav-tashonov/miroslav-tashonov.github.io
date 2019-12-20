@@ -1,0 +1,87 @@
+// $VARIABLES
+// ========================================
+
+// #layout
+@progress-border-radius       : @border-radius-small;
+@progress-bar-height          : 12px;
+
+// #typography
+@progress-bar-line-height     : @progress-bar-height;
+@progress-bar-font-size       : @font-size-base;
+
+// #colors
+@progress-bg                  : lighten(@black-10, 3);
+@progress-bar-color           : @white;
+@progress-bar-bg              : @flat-gray;
+@progress-bar-success-bg      : @success-color;
+@progress-bar-info-bg         : @info-color;
+@progress-bar-warning-bg      : @warning-color;
+@progress-bar-danger-bg       : @danger-color;
+
+// $MIXINS
+// ========================================
+
+.progress-bar-variant(@color) 
+{
+	background-color: @color;
+
+	// Deprecated parent class requirement as of v3.2.0
+	.progress-striped & { #gradient > .striped(); }
+}
+
+// $STYLES
+// ========================================
+
+// WebKit
+@-webkit-keyframes progress-bar-stripes 
+{
+	from  { background-position: 40px 0; }
+	to    { background-position: 0 0; }
+}
+
+// Spec and IE10+
+@keyframes progress-bar-stripes 
+{
+	from  { background-position: 40px 0; }
+	to    { background-position: 0 0; }
+}
+
+// Outer container
+.progress 
+{
+	overflow: hidden;
+	height: @progress-bar-height;
+	background-color: @progress-bg;
+	border-radius: @progress-border-radius;
+}
+
+// Bar of progress
+.progress-bar 
+{
+	float: left;
+	width: 0%;
+	height: 100%;
+	font-size: @font-size-small;
+	line-height: @progress-bar-line-height;
+	color: @progress-bar-color;
+	text-align: center;
+	background-color: @progress-bar-bg;
+	.transition(width .6s ease);
+}
+
+// Striped bars
+.progress-striped .progress-bar,
+.progress-bar-striped 
+{
+	#gradient > .striped();
+	background-size: 40px 40px;
+}
+
+// Call animation for the active one
+.progress.active .progress-bar,
+.progress-bar.active { .animation(progress-bar-stripes 2s linear infinite); }
+
+.progress-bar-success { .progress-bar-variant(@progress-bar-success-bg); }
+.progress-bar-info    { .progress-bar-variant(@progress-bar-info-bg); }
+.progress-bar-warning { .progress-bar-variant(@progress-bar-warning-bg); }
+.progress-bar-danger  { .progress-bar-variant(@progress-bar-danger-bg); }
